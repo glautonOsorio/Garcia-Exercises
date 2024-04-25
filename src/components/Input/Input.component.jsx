@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
-import * as Styled from "./Input.style";
+import * as Styled from "./Input.styles";
 
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import { ThemeContext } from "../../contexts/Theme.context";
 
 export const InputComponent = ({
   label,
@@ -18,6 +19,7 @@ export const InputComponent = ({
   onInput,
   errorMessage,
 }) => {
+  const { theme } = useContext(ThemeContext);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => {
@@ -26,7 +28,7 @@ export const InputComponent = ({
 
   return (
     <Styled.InputGroup>
-      <Styled.Label $color={error && "danger"} htmlFor={id}>
+      <Styled.Label $theme={theme} $color={error && "danger"} htmlFor={id}>
         {label}
       </Styled.Label>
 
@@ -36,6 +38,7 @@ export const InputComponent = ({
             onInput={onInput}
             mask={mask}
             as={as}
+            $theme={theme}
             $color={error && "danger"}
             type={showPassword ? "text" : type}
             id={id}
@@ -44,6 +47,7 @@ export const InputComponent = ({
           />
           {type === "password" && (
             <Styled.Icon
+              $theme={theme}
               $color={error && "danger"}
               type="button"
               onClick={handleShowPassword}
@@ -51,12 +55,15 @@ export const InputComponent = ({
               {!showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </Styled.Icon>
           )}
-          {error && <Styled.ErrorSpan>{errorMessage}</Styled.ErrorSpan>}
+          {error && (
+            <Styled.ErrorSpan $theme={theme}>{errorMessage}</Styled.ErrorSpan>
+          )}
         </Styled.InputContainer>
       )}
 
       {type === "textarea" && (
         <Styled.TextArea
+          $theme={theme}
           $color={error && "danger"}
           id={id}
           placeholder={placeholder}

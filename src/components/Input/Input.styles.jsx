@@ -13,8 +13,8 @@ export const Label = styled.label`
   align-items: flex-start;
   gap: 0.625rem;
   align-self: stretch;
-  color: ${({ $color }) => {
-    return $color === "danger" ? "#BE2E2E" : "#304050";
+  color: ${({ $color, $theme }) => {
+    return $color === "danger" ? $theme.error : $theme.text;
   }};
   font-size: 1rem;
   font-style: normal;
@@ -30,11 +30,11 @@ export const Input = styled.input`
   border-radius: 0.3125rem;
   font-size: 1rem;
   border: 1px solid
-    ${({ $color }) => {
-      return $color === "danger" ? "#BE2E2E" : "#B3B9BB";
+    ${({ $color, $theme }) => {
+      return $color === "danger" ? $theme.error : $theme.tertiary;
     }};
-  color: ${({ $color }) => {
-    return $color === "danger" ? "#BE2E2E" : "#304050";
+  color: ${({ $color, $theme }) => {
+    return $color === "danger" ? $theme.error : $theme.text;
   }};
   background-color: transparent;
   width: 100%;
@@ -48,11 +48,11 @@ export const TextArea = styled.textarea`
   align-self: stretch;
   border-radius: 0.3125rem;
   border: 1px solid
-    ${({ $color }) => {
-      return $color === "danger" ? "#BE2E2E" : "#B3B9BB";
+    ${({ $color, $theme }) => {
+      return $color === "danger" ? $theme.error : $theme.tertiary;
     }};
-  color: ${({ $color }) => {
-    return $color === "danger" ? "#BE2E2E" : "#304050";
+  color: ${({ $color, $theme }) => {
+    return $color === "danger" ? $theme.error : $theme.text;
   }};
   height: 5rem;
 `;
@@ -72,8 +72,8 @@ export const Icon = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ $color }) => {
-    return $color === "danger" ? "#BE2E2E" : "#304050";
+  color: ${({ $color, $theme }) => {
+    return $color === "danger" ? $theme.error : $theme.tertiary;
   }};
 `;
 
@@ -82,7 +82,9 @@ export const ErrorSpan = styled.span`
   align-items: flex-start;
   gap: 0.625rem;
   align-self: stretch;
-  color: #be2e2e;
+  color: ${({ $theme }) => {
+    $theme.error;
+  }};
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
