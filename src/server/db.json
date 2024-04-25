@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Joaquim Fernando Henrique Moura",
+      "age": 20,
+      "cpf": "601.614.077-57",
+      "birth_date": "10/01/2004",
+      "gender": "Male",
+      "email": "joaquim_moura@hotmail.con",
+      "password": "yNgBTXIp0C",
+      "zipcode": "57046-545",
+      "address": "Rua Maria Isabel Maia Pio dos Santos",
+      "number": 213,
+      "neighborhood": "Serraria",
+      "city": "Maceió",
+      "state": "AL"
+    },
+    {
+      "id": 2,
+      "name": "Raimunda Sebastiana de Paula",
+      "age": 79,
+      "cpf": "890.607.810-23",
+      "birth_date": "23/04/1945",
+      "gender": "Female",
+      "email": "raimunda.sebastiana.depaula@aol.com",
+      "password": "krLi9mdeBg",
+      "zipcode": "78150-538",
+      "address": "Avenida Júlio Domingos de Campos",
+      "number": 949,
+      "neighborhood": "Santa Isabel",
+      "city": "Várzea Grande",
+      "state": "MT"
+    },
+    {
+      "id": 3,
+      "name": "Sandra Brenda Adriana da Mata",
+      "age": 46,
+      "cpf": "012.416.697-08",
+      "birth_date": "15/01/1978",
+      "gender": "Female",
+      "email": "sandrabrendadamata@smbcontabil.com.br",
+      "password": "QdR2jGBrrQ",
+      "zipcode": "66825-483",
+      "address": "Alameda Renascer",
+      "number": 727,
+      "neighborhood": "Tapanã (Icoaraci)",
+      "city": "Belém",
+      "state": "PA"
+    },
+    {
+      "id": 4,
+      "name": "Luan José da Costa",
+      "age": 39,
+      "cpf": "280.047.666-41",
+      "birth_date": "26/01/1985",
+      "gender": "Male",
+      "email": "luan-dacosta76@imobiliariamaciel.com.br",
+      "password": "bWU2gCIdSx",
+      "zipcode": "77420-450",
+      "address": "Rua 8-B",
+      "number": 690,
+      "neighborhood": "Parque Residencial Nova Fronteira",
+      "city": "Gurupi",
+      "state": "TO"
+    },
+    {
+      "id": 5,
+      "name": "Sara Nair Rita Santos",
+      "age": 66,
+      "cpf": "018.883.331-54",
+      "birth_date": "21/01/1958",
+      "gender": "Female",
+      "email": "sara_nair_santos@zf.com",
+      "password": "028Fkjx1lL",
+      "zipcode": "69903-062",
+      "address": "Rua 18 de Fevereiro",
+      "number": 554,
+      "neighborhood": "Conjunto Xavier Maia",
+      "city": "Rio Branco",
+      "state": "AC"
+    }
+  ],
+
+  "exercise_locations": [
+    {
+      "user_id": 1,
+      "name": "Local de Exercício 1",
+      "description": "Descrição do Local de Exercício 1",
+      "location": "Rua Maria Isabel Maia Pio dos Santos, 213 - Serraria, Maceió - AL, 57046-545",
+      "coordinates": {
+        "latitude": -9.568194,
+        "longitude": -35.749274
+      },
+      "sports_types": ["caminhada", "musculação"]
+    },
+
+    {
+      "user_id": 2,
+      "name": "Local de Exercício 1",
+      "description": "Descrição do Local de Exercício 1",
+      "location": "Avenida Júlio Domingos de Campos, 949 - Santa Isabel, Várzea Grande - MT, 78150-538",
+      "coordinates": {
+        "latitude": -15.555555,
+        "longitude": -55.555555
+      },
+      "sports_types": ["natação", "musculação"]
+    }
+  ]
+}
