@@ -5,10 +5,8 @@ import { GlobalStyle } from "./Global.style.jsx";
 import { ThemeProvider } from "./contexts/Theme.context.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <App />
-      <GlobalStyle />
-    </ThemeProvider>
-  </React.StrictMode>
+  <ThemeProvider>
+    <App />
+    <GlobalStyle />
+  </ThemeProvider>
 );
