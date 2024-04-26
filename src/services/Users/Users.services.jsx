@@ -71,19 +71,19 @@ export const Delete = async (id) => {
 
 export const Update = async (id, newData) => {
   const data = {
-    name: data.name,
-    age: data.age,
-    cpf: unformatCPF(data.cpf),
-    birth_date: data.birth_date,
-    gender: data.gender,
-    email: data.email,
-    password: data.password,
-    zipcode: data.zipcode,
-    address: data.address,
-    number: data.number,
-    neighborhood: data.neighborhood,
-    city: data.city,
-    state: data.state,
+    name: newData.name,
+    age: newData.age,
+    cpf: unformatCPF(newData.cpf),
+    birth_date: newData.birth_date,
+    gender: newData.gender,
+    email: newData.email,
+    password: newData.password,
+    zipcode: newData.zipcode,
+    address: newData.address,
+    number: newData.number,
+    neighborhood: newData.neighborhood,
+    city: newData.city,
+    state: newData.state,
   };
 
   await axiosInstance
