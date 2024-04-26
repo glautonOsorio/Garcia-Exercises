@@ -1,10 +1,9 @@
 import { axiosInstance } from "../../helper/axiosInstance";
-import { unformatCPF } from "../../helper/cpfInstance";
 
-export const GetUsers = async () => {
+export const GetLocations = async () => {
   try {
     const data = await axiosInstance
-      .get("users")
+      .get("locations")
       .then((res) => {
         return res.data;
       })
@@ -20,7 +19,7 @@ export const GetUsers = async () => {
 export const GetID = async (id) => {
   try {
     const data = await axiosInstance
-      .get(`/users/${id}`)
+      .get(`locations/${id}`)
       .then((r) => {
         return r.data;
       })
@@ -34,23 +33,21 @@ export const GetID = async (id) => {
 
 export const Store = async (data) => {
   await axiosInstance
-    .post(`/users`, {
+    .post(`locations`, {
+      user_id: data.user_id,
       name: data.name,
-      age: data.age,
-      cpf: unformatCPF(data.cpf),
-      birth_date: data.birth_date,
-      gender: data.gender,
-      email: data.email,
-      password: data.password,
-      zipcode: data.zipcode,
-      address: data.address,
-      number: data.number,
-      neighborhood: data.neighborhood,
-      city: data.city,
-      state: data.state,
+      description: data.description,
+      location: data.location,
+      coordinates: {
+        latitude: data.latitude,
+        longitude: data.longitude,
+      },
+      sports_types: data.sports_types.map((sport) => ({
+        type: sport.type,
+      })),
     })
     .then(async () => {
-      alert("Usuário cadastrado com sucesso");
+      alert("Local cadastrado com sucesso");
     })
     .catch((err) => {
       console.log("err: ", err.response.data);
@@ -60,9 +57,9 @@ export const Store = async (data) => {
 
 export const Delete = async (id) => {
   await axiosInstance
-    .delete(`/users/${id}`)
+    .delete(`locations/${id}`)
     .then(() => {
-      alert("Usuário removido com sucesso");
+      alert("Local removido com sucesso");
     })
     .catch((err) => {
       console.log("err: ", err.response.data);
@@ -71,23 +68,20 @@ export const Delete = async (id) => {
 
 export const Update = async (id, newData) => {
   const data = {
+    user_id: newData.user_id,
     name: newData.name,
-    age: newData.age,
-    cpf: unformatCPF(newData.cpf),
-    birth_date: newData.birth_date,
-    gender: newData.gender,
-    email: newData.email,
-    password: newData.password,
-    zipcode: newData.zipcode,
-    address: newData.address,
-    number: newData.number,
-    neighborhood: newData.neighborhood,
-    city: newData.city,
-    state: newData.state,
+    description: newData.location,
+    coordinates: {
+      latitude: newData.latitude,
+      longitude: newData.longitude,
+    },
+    sports_types: newData.sports_types.map((sport) => ({
+      type: sport.type,
+    })),
   };
 
   await axiosInstance
-    .put(`/users/${id}`, data)
+    .put(`locations/${id}`, data)
     .then(() => {
       alert("Atualizado com sucesso");
     })
