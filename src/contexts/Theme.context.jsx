@@ -18,3 +18,7 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node,
+};
