@@ -81,7 +81,6 @@
       "state": "AC"
     }
   ],
-
   "locations": [
     {
       "user_id": 1,
@@ -93,12 +92,17 @@
         "longitude": -35.749274
       },
       "sports_types": [
-        { "type": "musculação" },
-        { "type": "futebol" },
-        { "type": "natação" }
+        {
+          "type": "musculação"
+        },
+        {
+          "type": "futebol"
+        },
+        {
+          "type": "natação"
+        }
       ]
     },
-
     {
       "user_id": 2,
       "name": "Local de Exercício 3",
@@ -109,9 +113,15 @@
         "longitude": -35.749274
       },
       "sports_types": [
-        { "type": "musculação" },
-        { "type": "futebol" },
-        { "type": "natação" }
+        {
+          "type": "musculação"
+        },
+        {
+          "type": "futebol"
+        },
+        {
+          "type": "natação"
+        }
       ]
     },
     {
@@ -124,9 +134,15 @@
         "longitude": -35.749274
       },
       "sports_types": [
-        { "type": "musculação" },
-        { "type": "futebol" },
-        { "type": "natação" }
+        {
+          "type": "musculação"
+        },
+        {
+          "type": "futebol"
+        },
+        {
+          "type": "natação"
+        }
       ]
     }
   ]
