@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SelectGroup = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -38,7 +39,9 @@ export const FormSelect = styled.select`
   width: 100%;
   font-size: 1rem;
   height: 3rem;
-  background-color: transparent;
+  background-color: ${({ $theme }) => {
+    $theme.tertiary;
+  }};
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -65,16 +68,14 @@ export const SelectOption = styled.option`
   }
 `;
 
-export const HelperText = styled.p`
-  display: flex;
-  align-items: flex-start;
-  gap: 0.625rem;
-  align-self: stretch;
-  color: ${({ $theme }) => {
-    $theme.error;
-  }};
-  font-size: 0.75rem;
+export const HelperText = styled.span`
+  position: absolute; /* Position the error text */
+  bottom: 0.2rem;
+  left: 0.2rem;
+  color: ${({ $theme }) => $theme.error};
+  font-size: 0.6rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
+  align-self: stretch;
 `;
