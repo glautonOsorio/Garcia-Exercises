@@ -5,20 +5,17 @@ export const LoginContext = createContext();
 
 export const LoginContextProvider = ({ children }) => {
   const [login, setLogin] = useState(true);
-  const [register, setRegister] = useState(false);
 
   const showLogin = () => {
-    setRegister(false);
     setLogin(true);
   };
 
   const showRegister = () => {
     setLogin(false);
-    setRegister(true);
   };
 
   return (
-    <LoginContext.Provider value={{ login, register, showLogin, showRegister }}>
+    <LoginContext.Provider value={{ login, showLogin, showRegister }}>
       {children}
     </LoginContext.Provider>
   );
