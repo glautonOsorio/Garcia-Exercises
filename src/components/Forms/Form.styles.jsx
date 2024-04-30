@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 export const Form = styled.form`
   width: 60%;
+  height: 85%;
   margin: 1rem;
   border: none;
   border-radius: 1rem;
   padding: 1rem;
+  overflow-y: scroll;
   background: ${({ $theme }) => $theme.primary};
-
   @media (max-width: 1024px) {
     width: 80%;
   }

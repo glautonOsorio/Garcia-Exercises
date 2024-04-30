@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { LoginContext } from "../../../contexts/Login.context.jsx";
 import { ThemeContext } from "../../../contexts/Theme.context.jsx";
 import * as Styled from "../Form.styles.jsx";
 import { InputComponent } from "../../Input/Input.component.jsx";
+import { LoginContext } from "../../../contexts/Login.context.jsx";
 
 export const LoginComponent = () => {
   const { theme } = useContext(ThemeContext);

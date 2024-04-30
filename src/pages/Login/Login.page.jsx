@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import * as Styled from "./Login.styles";
-import { ThemeContext } from "../contexts/Theme.context";
-import { LoginComponent } from "../components/Forms/Login/Login.component";
-import { RegisterUser } from "../components/Forms/RegisterUser/RegisterUser.component";
-import { LoginContext } from "../contexts/Login.context";
+import { LoginComponent } from "../../components/Forms/Login/Login.component";
+import { RegisterUser } from "../../components/Forms/RegisterUser/RegisterUser.component";
+import { ThemeContext } from "../../contexts/Theme.context";
+import { LoginContext } from "../../contexts/Login.context.jsx";
 
 export const LoginPage = () => {
   const { theme } = useContext(ThemeContext);
-  const { login } = useContext(LoginContext); // Only need login from LoginContext
+  const { login } = useContext(LoginContext);
+  console.log(login);
 
   return (
     <Styled.LoginPage $theme={theme}>

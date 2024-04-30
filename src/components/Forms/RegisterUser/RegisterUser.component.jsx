@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { LoginContext } from "../../../contexts/Login.context.jsx";
 import { ThemeContext } from "../../../contexts/Theme.context.jsx";
@@ -6,6 +6,8 @@ import * as Styled from "../Form.styles.jsx";
 import { InputComponent } from "../../Input/Input.component.jsx";
 import { SelectComponent } from "../../Select/Select.component.jsx";
 import Button from "@mui/material/Button";
+import { selectGender } from "../../../helper/selectInstance.jsx";
+import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
 
 export const RegisterUser = () => {
   const { theme } = useContext(ThemeContext);
@@ -15,22 +17,47 @@ export const RegisterUser = () => {
   const {
     register,
     handleSubmit,
-    reset,
+    getValues,
+    setValue,
+    watch,
     formState: { errors },
   } = useForm();
+  {
+    /*Nome
+  Sexo
+  CPF
+  Data de Nascimento
+  E-mail
+  Senha
+  Endereço (usar ViaCEP)
+*/
+  }
+  useEffect(() => {
+    if (watch("zipcode").length == 8) {
+      fetch(`https://viacep.com.br/ws/${watch("zipcode")}/json/`)
+        .then((res) => res.json())
+        .then((dados) => {
+          setValue("city", dados.localidade);
+          setValue("state", dados.uf);
+          setValue("address", dados.logradouro);
+          setValue("neighborhood", dados.bairro);
+        });
+    }
+  }, []);
 
-  const selectGender = [
-    { value: "", label: "Selecione" },
-    { value: "male", label: "Masculino" },
-    { value: "female", label: "Feminino" },
-    { value: "other", label: "Outro" },
-  ];
-  const selectType = [
-    { value: "", label: "Selecione" },
-    { value: "admin", label: "Administrador" },
-    { value: "medic", label: "Medico(a)" },
-    { value: "nurse", label: "Enfermeiro(a)" },
-  ];
+  const handleCep = async () => {
+    const cep = getValues("zipcode");
+    if (!!cep && cep.length == 8) {
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then((res) => res.json())
+        .then((dados) => {
+          setValue("city", dados.localidade);
+          setValue("state", dados.uf);
+          setValue("address", dados.logradouro);
+          setValue("neighborhood", dados.bairro);
+        });
+    }
+  };
 
   const test = () => {
     console.log("test");
@@ -47,13 +74,13 @@ export const RegisterUser = () => {
           </Styled.FormSubTitle>
           <Styled.FormRow>
             <InputComponent
-              id="fullName"
-              name="fullName"
+              id="name"
+              name="name"
               type="text"
               placeholder="Digite seu nome"
               label="Nome Completo"
               register={{
-                ...register("fullName", {
+                ...register("name", {
                   required: "Campo obrigatório",
                   minLength: {
                     value: 8,
@@ -65,30 +92,17 @@ export const RegisterUser = () => {
                   },
                 }),
               }}
-              error={!!errors.fullName}
-              errorMessage={errors.fullName?.message}
+              error={!!errors.name}
+              errorMessage={errors.name?.message}
             />
             <SelectComponent
               id={"gender"}
               label={"Gênero"}
               error={!!errors.gender}
-              errorMessage={errors.gender?.message}
+              helperText={errors.gender?.message}
               option={selectGender}
               register={{
                 ...register("gender", { required: "Selecione uma das opções" }),
-              }}
-            />
-            <SelectComponent
-              id={"type"}
-              name="type"
-              label={"Tipo de Usuario"}
-              error={!!errors.type}
-              errorMessage={errors.type?.message}
-              option={selectType}
-              register={{
-                ...register("type", {
-                  required: "Selecione uma das opções",
-                }),
               }}
             />
           </Styled.FormRow>
@@ -101,60 +115,48 @@ export const RegisterUser = () => {
               register={{
                 ...register("cpf", {
                   required: "Campo obrigatório",
-                  minLength: {
-                    value: 11,
-                    message: "Campo precisa ter acima de 11 caracteres",
-                  },
                   maxLength: {
                     value: 14,
-                    message: "Campo precisa ter menos de 14 caracteres",
+                    message: "Campo precisa ter 14 caracteres",
+                  },
+                  pattern: {
+                    value: /^\d{3}\.\d{3}\.\d{3}-\d{2}$/,
+                    message: "CPF precisa seguir o formato de xxx.xxx.xxx-xx",
                   },
                 }),
               }}
               error={!!errors.cpf}
               errorMessage={errors.cpf?.message}
             />
-
             <InputComponent
-              id="phoneNumber"
-              type="text"
-              label="Telefone"
-              placeholder="Digite seu telefone"
+              id="birthday"
+              name="birthday"
+              type="date"
               register={{
-                ...register("phoneNumber", {
+                ...register("birthday", { required: "Campo obrigatório" }),
+              }}
+              error={!!errors.birthday}
+              errorMessage={errors.birthday?.message}
+            />
+          </Styled.FormRow>
+          <Styled.FormRow>
+            <InputComponent
+              id="email"
+              type="email"
+              placeholder="Digite seu email"
+              label="email"
+              register={{
+                ...register("email", {
                   required: "Campo obrigatório",
-                  minLength: {
-                    value: 8,
-                    message: "Campo precisa ter acima de 8 caracteres",
-                  },
-                  maxLength: {
-                    value: 11,
-                    message: "Campo precisa ter menos de 11 caracteres",
+                  validate: {
+                    matchPath: (v) =>
+                      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v),
                   },
                 }),
               }}
-              error={!!errors.phoneNumber}
-              errorMessage={errors.phoneNumber?.message}
+              error={!!errors.email}
+              errorMessage={errors.email?.message}
             />
-          </Styled.FormRow>
-          <InputComponent
-            id="email"
-            type="email"
-            placeholder="Digite seu email"
-            label="email"
-            register={{
-              ...register("email", {
-                required: "Campo obrigatório",
-                validate: {
-                  matchPath: (v) =>
-                    /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v),
-                },
-              }),
-            }}
-            error={!!errors.email}
-            errorMessage={errors.email?.message}
-          />
-          <Styled.FormRow>
             <InputComponent
               id="password"
               type="password"
@@ -195,6 +197,96 @@ export const RegisterUser = () => {
               errorMessage={errors.passwordVerify?.message}
             />
           </Styled.FormRow>
+          <Styled.FormRow>
+            <InputComponent
+              id="zipcode"
+              name="zipcode"
+              type="text"
+              placeholder="CEP"
+              label="CEP"
+              register={{
+                ...register("zipcode", {
+                  required: "Campo obrigatório",
+                  onBlur: handleCep,
+                }),
+              }}
+              error={!!errors.cep}
+              errorMessage={errors.cep?.message}
+            />
+            <InputComponent
+              id="city"
+              name="city"
+              type="text"
+              placeholder="Cidade"
+              readOnly={true}
+              register={{
+                ...register("city", {
+                  required: "Campo obrigatório",
+                }),
+              }}
+              error={!!errors.city}
+              errorMessage={errors.city?.message}
+            />
+            <InputComponent
+              id="state"
+              name="state"
+              type="text"
+              placeholder="Estado"
+              readOnly={true}
+              register={{
+                ...register("state", {
+                  required: "Campo obrigatório",
+                }),
+              }}
+              error={!!errors.state}
+              errorMessage={errors.state?.message}
+            />
+          </Styled.FormRow>
+          <Styled.FormRow>
+            <InputComponent
+              id="address"
+              name="address"
+              type="text"
+              placeholder="Logradouro"
+              readOnly={true}
+              register={{
+                ...register("address", {
+                  required: "Campo obrigatório",
+                }),
+              }}
+              error={!!errors.address}
+              errorMessage={errors.address?.message}
+            />
+
+            <InputComponent
+              id="number"
+              name="number"
+              type="text"
+              placeholder="Número"
+              register={{
+                ...register("number", {
+                  required: "Campo obrigatório",
+                }),
+              }}
+              error={!!errors.number}
+              errorMessage={errors.number?.message}
+            />
+          </Styled.FormRow>
+
+          <InputComponent
+            id="neighborhood"
+            name="neighborhood"
+            type="text"
+            placeholder="Bairro"
+            readOnly={true}
+            register={{
+              ...register("neighborhood", {
+                required: "Campo obrigatório",
+              }),
+            }}
+            error={!!errors.street}
+            errorMessage={errors.street?.message}
+          />
         </Styled.FormColumn>
         <Styled.ButtonWrapper>
           <Button variant="outlined" type="button" disabled={disabled}>

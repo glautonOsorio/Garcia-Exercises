@@ -15,6 +15,7 @@ export const InputComponent = ({
   register,
   error,
   mask,
+  readOnly,
   as,
   onInput,
   errorMessage,
@@ -41,6 +42,7 @@ export const InputComponent = ({
             $theme={theme}
             $color={error && "danger"}
             type={showPassword ? "text" : type}
+            readOnly={readOnly}
             id={id}
             placeholder={placeholder}
             {...register}
@@ -65,6 +67,7 @@ export const InputComponent = ({
         <Styled.TextArea
           $theme={theme}
           $color={error && "danger"}
+          readOnly={readOnly}
           id={id}
           placeholder={placeholder}
           {...register}

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Joaquim Fernando Henrique Moura",
-      "age": 20,
+
       "cpf": "60161407757",
       "birth_date": "10/01/2004",
       "gender": "Male",
@@ -19,7 +19,7 @@
     {
       "id": 2,
       "name": "Raimunda Sebastiana de Paula",
-      "age": 79,
+
       "cpf": "89060781023",
       "birth_date": "23/04/1945",
       "gender": "Female",
@@ -35,7 +35,7 @@
     {
       "id": 3,
       "name": "Sandra Brenda Adriana da Mata",
-      "age": 46,
+
       "cpf": "01241669708",
       "birth_date": "15/01/1978",
       "gender": "Female",
@@ -51,7 +51,7 @@
     {
       "id": 4,
       "name": "Luan José da Costa",
-      "age": 39,
+
       "cpf": "28004766641",
       "birth_date": "26/01/1985",
       "gender": "Male",
@@ -67,7 +67,7 @@
     {
       "id": 5,
       "name": "Sara Nair Rita Santos",
-      "age": 66,
+
       "cpf": "01888333154",
       "birth_date": "21/01/1958",
       "gender": "Female",
