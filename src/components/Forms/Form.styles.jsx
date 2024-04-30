@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 export const Form = styled.form`
-  width: 60%;
-  height: 85%;
+  width: 50%;
+  height: 80%;
   margin: 1rem;
   border: none;
   border-radius: 1rem;
   padding: 1rem;
-  overflow-y: scroll;
   background: ${({ $theme }) => $theme.primary};
   @media (max-width: 1024px) {
     width: 80%;
@@ -103,4 +103,12 @@ export const ButtonWrapper = styled.div`
     flex-direction: column;
     gap: 1rem;
   }
+`;
+
+export const Search = styled(SearchOutlinedIcon)`
+  position: absolute; /* Position the error text */
+  bottom: 0.2rem;
+  left: 0.2rem;
+  z-index: 1000;
+  color: ${({ $theme }) => $theme.text};
 `;

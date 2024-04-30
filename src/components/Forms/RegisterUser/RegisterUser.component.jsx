@@ -5,9 +5,10 @@ import { ThemeContext } from "../../../contexts/Theme.context.jsx";
 import * as Styled from "../Form.styles.jsx";
 import { InputComponent } from "../../Input/Input.component.jsx";
 import { SelectComponent } from "../../Select/Select.component.jsx";
-import Button from "@mui/material/Button";
 import { selectGender } from "../../../helper/selectInstance.jsx";
 import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
+import { ButtonComponent } from "../../Button/Button.component.jsx";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 export const RegisterUser = () => {
   const { theme } = useContext(ThemeContext);
@@ -32,31 +33,15 @@ export const RegisterUser = () => {
   Endereço (usar ViaCEP)
 */
   }
-  useEffect(() => {
-    if (watch("zipcode").length == 8) {
-      fetch(`https://viacep.com.br/ws/${watch("zipcode")}/json/`)
-        .then((res) => res.json())
-        .then((dados) => {
-          setValue("city", dados.localidade);
-          setValue("state", dados.uf);
-          setValue("address", dados.logradouro);
-          setValue("neighborhood", dados.bairro);
-        });
-    }
-  }, []);
 
   const handleCep = async () => {
-    const cep = getValues("zipcode");
-    if (!!cep && cep.length == 8) {
-      fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then((res) => res.json())
-        .then((dados) => {
-          setValue("city", dados.localidade);
-          setValue("state", dados.uf);
-          setValue("address", dados.logradouro);
-          setValue("neighborhood", dados.bairro);
-        });
-    }
+    await ViaCEP(watch("zipcode")).then((data) => {
+      console.log(data);
+      setValue("city", data.localidade);
+      setValue("state", data.uf);
+      setValue("address", data.logradouro);
+      setValue("neighborhood", data.bairro);
+    });
   };
 
   const test = () => {
@@ -66,12 +51,9 @@ export const RegisterUser = () => {
     <>
       <Styled.Form $theme={theme} onSubmit={handleSubmit(test)}>
         <Styled.FormTitle $theme={theme}>
-          Preencha os campos para cadastrar
+          Preencha os campos para cadastrar o Usuario
         </Styled.FormTitle>
         <Styled.FormColumn>
-          <Styled.FormSubTitle $theme={theme}>
-            Cadastre um Usuario
-          </Styled.FormSubTitle>
           <Styled.FormRow>
             <InputComponent
               id="name"
@@ -83,8 +65,8 @@ export const RegisterUser = () => {
                 ...register("name", {
                   required: "Campo obrigatório",
                   minLength: {
-                    value: 8,
-                    message: "Campo precisa ter acima de 8 caracteres",
+                    value: 4,
+                    message: "Campo precisa ter acima de 4 caracteres",
                   },
                   maxLength: {
                     value: 64,
@@ -198,21 +180,31 @@ export const RegisterUser = () => {
             />
           </Styled.FormRow>
           <Styled.FormRow>
-            <InputComponent
-              id="zipcode"
-              name="zipcode"
-              type="text"
-              placeholder="CEP"
-              label="CEP"
-              register={{
-                ...register("zipcode", {
-                  required: "Campo obrigatório",
-                  onBlur: handleCep,
-                }),
-              }}
-              error={!!errors.cep}
-              errorMessage={errors.cep?.message}
-            />
+            
+              <InputComponent
+                id="zipcode"
+                name="zipcode"
+                type="text"
+                placeholder="CEP"
+                label="CEP"
+                register={{
+                  ...register("zipcode", {
+                    required: "Campo obrigatório",
+                    maxLength: {
+                      value: 8,
+                      message: "Campo precisa ter até de 8 caracteres",
+                    },
+                    minLength: {
+                      value: 8,
+                      message: "Campo precisa ter até de 8 caracteres",
+                    },
+                  }),
+                }}
+                error={!!errors.zipcode}
+                errorMessage={errors.zipcode?.message}
+              >
+                <SearchOutlinedIcon />
+              </InputComponent>
             <InputComponent
               id="city"
               name="city"
@@ -264,40 +256,50 @@ export const RegisterUser = () => {
               type="text"
               placeholder="Número"
               register={{
-                ...register("number", {
-                  required: "Campo obrigatório",
-                }),
+                ...register("number"),
               }}
               error={!!errors.number}
               errorMessage={errors.number?.message}
             />
-          </Styled.FormRow>
 
-          <InputComponent
-            id="neighborhood"
-            name="neighborhood"
-            type="text"
-            placeholder="Bairro"
-            readOnly={true}
-            register={{
-              ...register("neighborhood", {
-                required: "Campo obrigatório",
-              }),
-            }}
-            error={!!errors.street}
-            errorMessage={errors.street?.message}
-          />
+            <InputComponent
+              id="neighborhood"
+              name="neighborhood"
+              type="text"
+              placeholder="Bairro"
+              readOnly={true}
+              register={{
+                ...register("neighborhood", {
+                  required: "Campo obrigatório",
+                }),
+              }}
+              error={!!errors.neighborhood}
+              errorMessage={errors.neighborhood?.message}
+            />
+          </Styled.FormRow>
         </Styled.FormColumn>
         <Styled.ButtonWrapper>
-          <Button variant="outlined" type="button" disabled={disabled}>
-            Editar
-          </Button>
-          <Button variant="outlined" disabled={disabled}>
-            Deletar
-          </Button>
-          <Button variant="outlined" type="submit">
-            Salvar
-          </Button>
+          <ButtonComponent
+            type={"button"}
+            text={"Editar"}
+            preset={"edit"}
+            variant={"outlined"}
+            disabled={true}
+          />
+          <ButtonComponent
+            type={"button"}
+            text={"Deletar"}
+            preset={"delete"}
+            variant={"outlined"}
+            disabled={true}
+          />
+          <ButtonComponent
+            type={"submit"}
+            text={"Salvar"}
+            preset={"save"}
+            variant={"outlined"}
+          />
+
           <Styled.FormLegend $theme={theme} onClick={showLogin}>
             Voltar para o login?
           </Styled.FormLegend>
