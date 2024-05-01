@@ -16,7 +16,21 @@ export const GetUsers = async () => {
     console.log(error);
   }
 };
-
+export const GetEmail = async (email) => {
+  try {
+    const data = await axiosInstance
+      .get(`users?email=${email}`)
+      .then((res) => {
+        return res.data;
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 export const GetID = async (id) => {
   try {
     const data = await axiosInstance

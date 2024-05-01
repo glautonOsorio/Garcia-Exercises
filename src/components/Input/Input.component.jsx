@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 
 import * as Styled from "./Input.styles";
 
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { ThemeContext } from "../../contexts/Theme.context";
@@ -15,9 +16,12 @@ export const InputComponent = ({
   register,
   error,
   mask,
+  readOnly,
   as,
   onInput,
   errorMessage,
+  cep,
+  onClick,
 }) => {
   const { theme } = useContext(ThemeContext);
   const [showPassword, setShowPassword] = useState(false);
@@ -41,6 +45,7 @@ export const InputComponent = ({
             $theme={theme}
             $color={error && "danger"}
             type={showPassword ? "text" : type}
+            readOnly={readOnly}
             id={id}
             placeholder={placeholder}
             {...register}
@@ -55,6 +60,16 @@ export const InputComponent = ({
               {!showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </Styled.Icon>
           )}
+          {cep === true && (
+            <Styled.Icon
+              $theme={theme}
+              $color={error && "danger"}
+              type="button"
+              onClick={onClick}
+            >
+              <SearchOutlinedIcon />
+            </Styled.Icon>
+          )}
           {error && (
             <Styled.ErrorSpan $theme={theme}>{errorMessage}</Styled.ErrorSpan>
           )}
@@ -65,6 +80,7 @@ export const InputComponent = ({
         <Styled.TextArea
           $theme={theme}
           $color={error && "danger"}
+          readOnly={readOnly}
           id={id}
           placeholder={placeholder}
           {...register}

@@ -1,35 +1,28 @@
 import { createBrowserRouter } from "react-router-dom";
 import { PrivateRoutes } from "./PrivateRoutes";
+import { HomePage } from "../pages/Home/Home.page";
+import { LoginPage } from "../pages/Login/Login.page";
 
 export const AppRouter = createBrowserRouter([
   {
     path: "/login",
-    element: {
-      /*login*/
-    },
+    element: <LoginPage />,
   },
   {
-    path: "/register-user",
-    element: {
-      /*register the user*/
-    },
+    path: "/",
+    element: <HomePage />,
   },
-
   {
-    element: {
-      /*Layout*/
+    /*
+ {
+   element: {
+     Layout
     },
     children: [
       {
-        path: "/",
-        element: {
-          /*main*/
-        },
-      },
-      {
         path: "/locations-list",
         element: {
-          /*all location*/
+          all location
         },
       },
       {
@@ -45,5 +38,7 @@ export const AppRouter = createBrowserRouter([
         element: <PrivateRoutes></PrivateRoutes>,
       },
     ],
+  },
+*/
   },
 ]);

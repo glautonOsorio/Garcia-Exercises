@@ -1,4 +1,6 @@
 import React, { createContext, useState } from "react";
+import PropTypes from "prop-types";
+
 import { darkTheme, lightTheme } from "../Themes";
 
 export const ThemeContext = createContext();
@@ -17,4 +19,8 @@ export const ThemeProvider = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   );
+};
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node,
 };

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const InputGroup = styled.div`
+  position: relative; /* Ensure relative positioning for ErrorSpan */
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -13,9 +14,8 @@ export const Label = styled.label`
   align-items: flex-start;
   gap: 0.625rem;
   align-self: stretch;
-  color: ${({ $color, $theme }) => {
-    return $color === "danger" ? $theme.error : $theme.text;
-  }};
+  color: ${({ $color, $theme }) =>
+    $color === "danger" ? $theme.error : $theme.text};
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -30,13 +30,11 @@ export const Input = styled.input`
   border-radius: 0.3125rem;
   font-size: 1rem;
   border: 1px solid
-    ${({ $color, $theme }) => {
-      return $color === "danger" ? $theme.error : $theme.tertiary;
-    }};
-  color: ${({ $color, $theme }) => {
-    return $color === "danger" ? $theme.error : $theme.text;
-  }};
-  background-color: transparent;
+    ${({ $color, $theme }) =>
+      $color === "danger" ? $theme.error : $theme.tertiary};
+  color: ${({ $color, $theme }) =>
+    $color === "danger" ? $theme.error : $theme.text};
+  background-color: ${({ $theme }) => $theme.secondary};
   width: 100%;
   height: 3rem;
 `;
@@ -48,12 +46,10 @@ export const TextArea = styled.textarea`
   align-self: stretch;
   border-radius: 0.3125rem;
   border: 1px solid
-    ${({ $color, $theme }) => {
-      return $color === "danger" ? $theme.error : $theme.tertiary;
-    }};
-  color: ${({ $color, $theme }) => {
-    return $color === "danger" ? $theme.error : $theme.text;
-  }};
+    ${({ $color, $theme }) =>
+      $color === "danger" ? $theme.error : $theme.tertiary};
+  color: ${({ $color, $theme }) =>
+    $color === "danger" ? $theme.error : $theme.text};
   height: 5rem;
 `;
 
@@ -72,21 +68,17 @@ export const Icon = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ $color, $theme }) => {
-    return $color === "danger" ? $theme.error : $theme.tertiary;
-  }};
+  color: ${({ $color, $theme }) =>
+    $color === "danger" ? $theme.error : $theme.tertiary};
 `;
 
 export const ErrorSpan = styled.span`
-  display: flex;
-  align-items: flex-start;
-  gap: 0.625rem;
-  align-self: stretch;
-  color: ${({ $theme }) => {
-    $theme.error;
-  }};
-  font-size: 0.75rem;
+  position: absolute; /* Position the error text */
+  bottom: 0.2rem;
+  left: 0.2rem;
+  color: ${({ $theme }) => $theme.error};
+  font-size: 0.6rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
 `;

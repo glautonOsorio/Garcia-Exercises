@@ -9,5 +9,5 @@ export const PrivateRoutes = ({ children }) => {
 };
 
 PrivateRoutes.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
