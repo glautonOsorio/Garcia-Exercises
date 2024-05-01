@@ -8,7 +8,7 @@ export const FooterContainer = styled.div`
   align-items: center;
   padding: 1rem;
   width: 100%;
-  height: 5rem;
+  height: 10%;
   background: ${({ $theme }) => $theme.primary};
 
   @media (max-width: 1024px) {
@@ -39,7 +39,7 @@ export const FooterColumm = styled.div`
 `;
 export const FooterSpan = styled.span`
   position: relative;
-  top: 1.5rem;
+  top: 0.8rem;
   right: 0.8rem;
   font-size: 1rem;
   font-weight: 400;
