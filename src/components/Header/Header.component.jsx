@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import * as Styled from "./Header.styles";
 import { LoginContext } from "../../contexts/Login.context";
 import { useNavigate } from "react-router-dom";
@@ -20,9 +20,6 @@ export function HeaderComponent() {
     showRegister();
     navigate("/login");
   };
-  useEffect(() => {
-    console.log(user);
-  }, []);
 
   return (
     <Styled.HeaderContainer $theme={theme}>
