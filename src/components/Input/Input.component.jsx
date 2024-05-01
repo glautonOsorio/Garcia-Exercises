@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 
 import * as Styled from "./Input.styles";
 
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { ThemeContext } from "../../contexts/Theme.context";
@@ -19,6 +20,8 @@ export const InputComponent = ({
   as,
   onInput,
   errorMessage,
+  cep,
+  onClick,
 }) => {
   const { theme } = useContext(ThemeContext);
   const [showPassword, setShowPassword] = useState(false);
@@ -55,6 +58,16 @@ export const InputComponent = ({
               onClick={handleShowPassword}
             >
               {!showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+            </Styled.Icon>
+          )}
+          {cep === true && (
+            <Styled.Icon
+              $theme={theme}
+              $color={error && "danger"}
+              type="button"
+              onClick={onClick}
+            >
+              <SearchOutlinedIcon />
             </Styled.Icon>
           )}
           {error && (

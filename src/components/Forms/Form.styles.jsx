@@ -3,15 +3,15 @@ import styled from "styled-components";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 export const Form = styled.form`
-  width: 50%;
-  height: 80%;
-  margin: 1rem;
+  width: 80%;
   border: none;
   border-radius: 1rem;
   padding: 1rem;
   background: ${({ $theme }) => $theme.primary};
   @media (max-width: 1024px) {
-    width: 80%;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
   }
 `;
 export const LoginForm = styled.form`
@@ -98,6 +98,8 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  padding: 1rem;
+  justify-content: space-around;
 
   @media (max-width: 1024px) {
     flex-direction: column;

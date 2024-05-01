@@ -8,7 +8,6 @@ import { LoginContext } from "../../contexts/Login.context.jsx";
 export const LoginPage = () => {
   const { theme } = useContext(ThemeContext);
   const { login } = useContext(LoginContext);
-  console.log(login);
 
   return (
     <Styled.LoginPage $theme={theme}>

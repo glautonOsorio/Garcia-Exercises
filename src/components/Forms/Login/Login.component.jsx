@@ -4,10 +4,13 @@ import { ThemeContext } from "../../../contexts/Theme.context.jsx";
 import * as Styled from "../Form.styles.jsx";
 import { InputComponent } from "../../Input/Input.component.jsx";
 import { LoginContext } from "../../../contexts/Login.context.jsx";
+import { ButtonComponent } from "../../Button/Button.component.jsx";
+import { AuthContext } from "../../../contexts/Auth.context.jsx";
 
 export const LoginComponent = () => {
   const { theme } = useContext(ThemeContext);
   const { showRegister } = useContext(LoginContext);
+  const { login } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -15,12 +18,9 @@ export const LoginComponent = () => {
     formState: { errors },
   } = useForm();
 
-  const test = () => {
-    console.log("test");
-  };
   return (
     <>
-      <Styled.LoginForm $theme={theme} onSubmit={handleSubmit(test)}>
+      <Styled.LoginForm $theme={theme} onSubmit={handleSubmit(login)}>
         <Styled.FormColumn>
           <Styled.FormTitle $theme={theme}>Login</Styled.FormTitle>
         </Styled.FormColumn>
@@ -64,15 +64,13 @@ export const LoginComponent = () => {
         </Styled.FormColumn>
         <Styled.FormColumn>
           <Styled.ButtonWrapper>
-            <button type="submit">Login</button>
-            <button type="button" onClick={showRegister}>
-              Criar Conta
-            </button>
+            <ButtonComponent type={"submit"} text={"Login"} preset={"save"} />
+            <ButtonComponent
+              type={"button"}
+              text={"Criar conta"}
+              onClick={showRegister}
+            />
           </Styled.ButtonWrapper>
-
-          <Styled.FormLegend $theme={theme} href="#">
-            Esqueceu sua senha?
-          </Styled.FormLegend>
         </Styled.FormColumn>
       </Styled.LoginForm>
     </>
