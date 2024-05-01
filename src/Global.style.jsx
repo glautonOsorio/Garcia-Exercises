@@ -9,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     outline: none;
     font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
   }
 
   html, body, #root {
