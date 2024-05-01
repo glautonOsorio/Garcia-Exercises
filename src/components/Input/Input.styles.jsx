@@ -34,7 +34,6 @@ export const Input = styled.input`
       $color === "danger" ? $theme.error : $theme.tertiary};
   color: ${({ $color, $theme }) =>
     $color === "danger" ? $theme.error : $theme.text};
-  background-color: ${({ $theme }) => $theme.secondary};
   width: 100%;
   height: 3rem;
 `;

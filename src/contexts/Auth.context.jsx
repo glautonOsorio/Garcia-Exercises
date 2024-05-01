@@ -20,7 +20,9 @@ export const AuthContextProvider = ({ children }) => {
 
     if (getLocalStorage("logged") != null) {
       const loggedUser = getLocalStorage("logged");
-      setUser(GetEmail(loggedUser));
+      GetEmail(loggedUser).then((res) => {
+        setUser(res[0]);
+      });
     }
   }, []);
 
