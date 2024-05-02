@@ -3,7 +3,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import styled from "styled-components";
 
 const StyledMapContainer = styled(MapContainer)`
-  height: 400px;
+  height: 90vh;
+  width: 90%;
+  border-radius: 2rem;
 `;
 
 const StyledPopup = styled(Popup)`
@@ -12,12 +14,10 @@ const StyledPopup = styled(Popup)`
   padding: 10px;
 `;
 
-const MyMap = () => {
+export const LeafletComponent = () => {
   return (
     <StyledMapContainer
-      center={[51.505, -0.09]}
-      zoom={13}
-      scrollWheelZoom={false}
+    center={[48.8566, 2.3522]} zoom={13}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={[51.505, -0.09]}>
@@ -28,8 +28,6 @@ const MyMap = () => {
     </StyledMapContainer>
   );
 };
-
-export default MyMap;
 
 {
   /* thank god for indians yuhu */
