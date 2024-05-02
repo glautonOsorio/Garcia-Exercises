@@ -70,7 +70,7 @@ export const HeaderTitle = styled.h1`
 
 export const StyledLink = styled(NavLink)`
   display: flex;
-  color: ${({ $theme }) => $theme.accent};
+  color: ${({ $theme }) => $theme.text};
   font-size: 1.5rem;
   font-weight: 400;
   padding: 1rem 1.5rem;

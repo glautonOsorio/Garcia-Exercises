@@ -1,5 +1,5 @@
 export const darkTheme = {
-  background: "#121212",
+  background: "#121212	",
   primary: "#663399",
   secondary: "#4CAF50",
   tertiary: "#2196F3",
