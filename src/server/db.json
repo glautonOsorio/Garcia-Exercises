@@ -104,17 +104,7 @@
         "latitude": -9.568194,
         "longitude": -35.749274
       },
-      "sports_types": [
-        {
-          "type": "musculação"
-        },
-        {
-          "type": "futebol"
-        },
-        {
-          "type": "natação"
-        }
-      ]
+      "sports_types": ["musculação", " futebol", "natação"]
     },
     {
       "user_id": 2,
@@ -125,17 +115,7 @@
         "latitude": -9.568194,
         "longitude": -35.749274
       },
-      "sports_types": [
-        {
-          "type": "musculação"
-        },
-        {
-          "type": "futebol"
-        },
-        {
-          "type": "natação"
-        }
-      ]
+      "sports_types": ["musculação", " futebol", "natação"]
     },
     {
       "user_id": 3,
@@ -146,17 +126,8 @@
         "latitude": -9.568194,
         "longitude": -35.749274
       },
-      "sports_types": [
-        {
-          "type": "musculação"
-        },
-        {
-          "type": "futebol"
-        },
-        {
-          "type": "natação"
-        }
-      ]
+
+      "sports_types": ["musculação", " futebol", "natação"]
     }
   ]
 }
