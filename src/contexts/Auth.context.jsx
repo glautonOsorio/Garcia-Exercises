@@ -22,6 +22,7 @@ export const AuthContextProvider = ({ children }) => {
       const loggedUser = getLocalStorage("logged");
       GetEmail(loggedUser).then((res) => {
         setUser(res[0]);
+        setIsLogged(true);
       });
     }
   }, []);

@@ -71,6 +71,9 @@ export const LoginComponent = () => {
               onClick={showRegister}
             />
           </Styled.ButtonWrapper>
+          <Styled.StyledLink $theme={theme} to={"/"}>
+            Voltar para a Pagina Principal?
+          </Styled.StyledLink>
         </Styled.FormColumn>
       </Styled.LoginForm>
     </>

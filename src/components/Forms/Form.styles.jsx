@@ -34,6 +34,7 @@ export const FormColumn = styled.div`
   width: 100%;
   padding: 0.5rem;
   gap: 1rem;
+  text-align: center;
 
   @media (max-width: 1024px) {
     gap: 0.5rem;
@@ -47,6 +48,7 @@ export const FormRow = styled.div`
   width: 100%;
   gap: 1rem;
   margin: 0.5rem;
+  text-align: center;
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -113,4 +115,25 @@ export const Search = styled(SearchOutlinedIcon)`
   left: 0.2rem;
   z-index: 1000;
   color: ${({ $theme }) => $theme.text};
+`;
+
+export const StyledLink = styled(NavLink)`
+  display: flex;
+  color: ${({ $theme }) => $theme.text};
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1rem 1.5rem;
+  text-align: center;
+
+  text-decoration: none;
+  text-shadow: 0.1rem 0.1rem 0.2rem ${({ $theme }) => $theme.tertiary};
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0.8rem 1rem;
+    gap: 1rem;
+  }
 `;

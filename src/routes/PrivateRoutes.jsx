@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 
 export const PrivateRoutes = ({ children }) => {
   const { isLogged } = useContext(AuthContext);
-  return isLogged ? children : <Navigate to={"login"} />;
+  return isLogged ? children : <Navigate to={"/"} />;
 };
 
 PrivateRoutes.propTypes = {

@@ -32,12 +32,10 @@ export const Input = styled.input`
   border: 1px solid
     ${({ $color, $theme }) =>
       $color === "danger" ? $theme.error : $theme.tertiary};
-  color: ${({ $color, $theme }) =>
-    $color === "danger" ? $theme.error : $theme.text};
+  color: ${({ $color }) => ($color === "danger" ? "#DC143C" : "#000")};
   width: 100%;
   height: 3rem;
 `;
-
 export const TextArea = styled.textarea`
   display: flex;
   padding: 0.5rem;
