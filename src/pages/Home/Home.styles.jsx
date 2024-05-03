@@ -11,8 +11,8 @@ export const HomeContainer = styled.div`
 `;
 
 export const SMapContainer = styled(MapContainer)`
-  height: 90vh;
-  width: 90%;
+  height: 20rem;
+  width: 60%;
   border-radius: 2rem;
 `;
 

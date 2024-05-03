@@ -21,8 +21,9 @@ export const ThemeProvider = ({ children }) => {
 
   const changeTheme = () => {
     const newTheme = theme === lightTheme ? darkTheme : lightTheme;
-    setTheme(newTheme);
     setLocalStorage("theme", newTheme);
+    setTheme(newTheme);
+    
   };
 
   return (
