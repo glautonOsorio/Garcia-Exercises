@@ -76,9 +76,6 @@
       "state": "AC"
     },
     {
-      "id": 6
-    },
-    {
       "name": "Banana Fernando Henrique Moura",
       "cpf": "60161407757",
       "birth_date": "10/01/2004",
@@ -92,54 +89,1171 @@
       "city": "Maceió",
       "state": "AL",
       "id": 7
+    },
+    {
+      "name": "Testestesteast",
+      "cpf": "12345879884",
+      "gender": "female",
+      "email": "testestes@testes.com",
+      "password": "123456",
+      "zipcode": "38401466",
+      "address": "Rua Joaquim Clemente Oliveira",
+      "number": "123",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "id": 8
     }
   ],
   "locations": [
     {
       "user_id": 1,
-      "name": "Local de Exercício 1",
-      "description": "Descrição dossssssssssssssssssss Local de Exercício 1Descrição do Local de Exercício 1Descrição do Local de Exercício 1Descrição do Local de Exercício 1Descrição do Local de Exercício 1Descrição do Local de Exercício 1",
-      "location": "Rua Maria Isabel Maia Pio dos Santos, 213 - Serraria, Maceió - AL, 57046-545",
+      "name": "sfasfffffffffffffffffffff",
       "coordinates": {
-        "latitude": -8.568194,
-        "longitude": -36.749274
+        "latitude": "-19.7532643",
+        "longitude": "-44.1487536"
       },
-      "sports_types": {
-        "option1": "musculação",
-        "option2": " futebol",
-        "option3": "natação"
-      }
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 1
     },
     {
-      "user_id": 2,
-      "name": "Local de Exercício 3",
-      "description": "Descrição do Local escrição dossssssssssssssssssss Loca Exercício 1",
-      "location": "Rua Maria Isabel Maia Pio dos Santos, 213 - Serraria, Maceió - AL, 57046-545",
+      "user_id": 1,
+      "name": "sfasfffffffffffffffffffff",
       "coordinates": {
-        "latitude": -7.568194,
-        "longitude": -34.749274
+        "latitude": "-19.7532643",
+        "longitude": "-44.1487536"
       },
-      "sports_types": {
-        "option1": "musculação",
-        "option2": " futebol",
-        "option3": "natação"
-      }
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 2
     },
     {
-      "user_id": 3,
-      "name": "Local de Exercício 3",
-      "description": "Descriçãescrição dossssssssssssssssssss Loescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaca",
-      "location": "Rua Maria Isabel Maia Pio dos Santos, 213 - Serraria, Maceió - AL, 57046-545",
+      "user_id": 5,
+      "name": "fassssssssssss",
       "coordinates": {
-        "latitude": -9.568194,
-        "longitude": -35.749274
+        "latitude": "-19.7532643",
+        "longitude": "-44.1487536"
       },
-
-      "sports_types": {
-        "option1": "musculação",
-        "option2": " futebol",
-        "option3": "natação"
-      }
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 3
+    },
+    {
+      "user_id": 5,
+      "name": "fassssssssssss",
+      "coordinates": {
+        "latitude": "-19.7532643",
+        "longitude": "-44.1487536"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 4
+    },
+    {
+      "user_id": 5,
+      "name": "fassssssssssss",
+      "coordinates": {
+        "latitude": "-19.7532643",
+        "longitude": "-44.1487536"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 5
+    },
+    {
+      "user_id": 5,
+      "name": "TESTE uberlandia",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 6
+    },
+    {
+      "user_id": 5,
+      "name": "Teste3",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 7
+    },
+    {
+      "user_id": 5,
+      "name": "Teste3",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 8
+    },
+    {
+      "user_id": 5,
+      "name": "Teste3",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 9
+    },
+    {
+      "user_id": 5,
+      "name": "Teste3",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 10
+    },
+    {
+      "user_id": 5,
+      "name": "Teste3",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 11
+    },
+    {
+      "user_id": 5,
+      "name": "Teste3",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 12
+    },
+    {
+      "user_id": 5,
+      "name": "Teste3",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 13
+    },
+    {
+      "user_id": 5,
+      "name": "Teste3",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 14
+    },
+    {
+      "user_id": 5,
+      "name": "SFAAAAAAAAAAAAAA",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 15
+    },
+    {
+      "user_id": 5,
+      "name": "FFFFFFFFFFFFFFFFFFFFFFFFFF",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 16
+    },
+    {
+      "user_id": 5,
+      "name": "SAFFFFFFFFFFFFFFFFFFFF",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 17
+    },
+    {
+      "user_id": 5,
+      "name": "SAFFFFFFFFFFFFFFFFFFFF",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 18
+    },
+    {
+      "user_id": 5,
+      "name": "asffffffffffffffffffffffffffffffff",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": true
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 19
+    },
+    {
+      "user_id": 5,
+      "name": "hedefdhfdffh",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 21
+    },
+    {
+      "user_id": 5,
+      "name": "hedefdhfdffh",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 22
+    },
+    {
+      "user_id": 5,
+      "name": "hedefdhfdffh",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 23
+    },
+    {
+      "user_id": 5,
+      "name": "hedefdhfdffh",
+      "zipcode": "38401-466",
+      "neighborhood": "Maravilha",
+      "city": "Uberlândia",
+      "state": "MG",
+      "coordinates": {
+        "latitude": "-18.8841466",
+        "longitude": "-48.2999995"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": true
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 24
     }
   ]
 }
