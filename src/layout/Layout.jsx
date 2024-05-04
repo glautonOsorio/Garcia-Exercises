@@ -11,10 +11,10 @@ export const Layout = () => {
 
   return (
     <Styled.App $theme={theme}>
-      <Styled.Main>
+      <Styled.Main $theme={theme}>
         <HeaderComponent />
         <NavBarComponent />
-        <Styled.Content>
+        <Styled.Content $theme={theme}>
           <Outlet />
         </Styled.Content>
         <FooterComponent />

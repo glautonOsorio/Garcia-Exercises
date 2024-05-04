@@ -41,11 +41,11 @@ export const PopupSpan = styled.span`
   overflow-y: auto; /* Add vertical overflow scrolling if needed */
 `;
 
-export const PopupRow = styled.div`
-  display: flex;
-  flex-direction: row;
+export const PopupGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 columns
+  width: 100%;
   gap: 1rem;
-  justify-content: center;
 `;
 
 export const PopupSportType = styled.span`

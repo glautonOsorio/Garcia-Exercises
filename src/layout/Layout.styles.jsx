@@ -13,6 +13,7 @@ export const Main = styled.main`
   flex-direction: column;
   height: 100%;
   width: 100%;
+  background-color: ${({ $theme }) => $theme.background};
 `;
 
 export const Content = styled.div`
@@ -21,4 +22,6 @@ export const Content = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 1rem;
+  background-color: ${({ $theme }) => $theme.background};
 `;

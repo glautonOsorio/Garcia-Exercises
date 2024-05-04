@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 export const Form = styled.form`
-  width: 80%;
+  width: 60%;
   border: none;
   border-radius: 1rem;
   padding: 1rem;
@@ -24,6 +24,17 @@ export const LoginForm = styled.form`
 
   @media (max-width: 1024px) {
     width: 60%;
+  }
+`;
+
+export const FormGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 columns
+  width: 100%;
+  gap: 1rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); // 3 columns
   }
 `;
 

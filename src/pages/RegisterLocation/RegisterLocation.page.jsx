@@ -1,7 +1,10 @@
+import { RegisterLocationComponent } from "../../components/Forms/Location/RegisterLocation.component";
+import * as Styled from "./RegisterLocation.styles";
+
 export const RegisterLocationPage = () => {
   return (
-    <div>
-      <h1>Register Location Page </h1>
-    </div>
+    <Styled.RegisterLocationContainer>
+      <RegisterLocationComponent />
+    </Styled.RegisterLocationContainer>
   );
 };

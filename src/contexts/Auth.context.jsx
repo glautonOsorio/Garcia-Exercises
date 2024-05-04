@@ -1,4 +1,6 @@
 import { createContext, useEffect, useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import PropTypes from "prop-types";
 import {
   deleteLocalStorage,
@@ -29,7 +31,12 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (data) => {
     if (user !== null) {
-      return alert("Usuário já logado");
+      toast.error("Usuário já logado", {
+        position: "top-center",
+        theme: "colored",
+        autoClose: 2000,
+      });
+      return;
     }
     const foundUser = users.find(
       (item) => item.password === data.password && item.email === data.email
@@ -38,9 +45,18 @@ export const AuthContextProvider = ({ children }) => {
       setUser(foundUser);
       setIsLogged(true);
       setLocalStorage("logged", foundUser.email);
+      toast.success("Bem Vindo!", {
+        position: "bottom-right",
+        theme: "colored",
+        autoClose: 2000,
+      });
       window.location.href = "/";
     } else {
-      alert("Senha ou Email incorreto! Tente novamente");
+      toast.error("Senha ou Email incorreto! Tente novamente", {
+        position: "top-center",
+        theme: "colored",
+        autoClose: 2000,
+      });
     }
   };
 

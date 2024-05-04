@@ -31,60 +31,87 @@ export const InputComponent = ({
   };
 
   return (
-    <Styled.InputGroup>
-      <Styled.Label $theme={theme} $color={error && "danger"} htmlFor={id}>
-        {label}
-      </Styled.Label>
-
-      {type !== "textarea" && (
-        <Styled.InputContainer>
-          <Styled.Input
+    <Styled.InputGroup $type={type}>
+      {type === "checkbox" && (
+        <Styled.CheckboxLabel $theme={theme}>
+          <Styled.CheckboxInput
+            $theme={theme}
+            type="checkbox"
             onInput={onInput}
             mask={mask}
             as={as}
-            $theme={theme}
             $color={error && "danger"}
-            type={showPassword ? "text" : type}
             readOnly={readOnly}
             id={id}
             placeholder={placeholder}
             {...register}
           />
-          {type === "password" && (
-            <Styled.Icon
+          {label}
+        </Styled.CheckboxLabel>
+      )}
+
+      {type !== "checkbox" && type !== "textarea" && (
+        <>
+          <Styled.Label $theme={theme} $color={error && "danger"} htmlFor={id}>
+            {label}
+          </Styled.Label>
+          <Styled.InputContainer>
+            <Styled.Input
+              onInput={onInput}
+              mask={mask}
+              as={as}
               $theme={theme}
               $color={error && "danger"}
-              type="button"
-              onClick={handleShowPassword}
-            >
-              {!showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
-            </Styled.Icon>
-          )}
-          {cep === true && (
-            <Styled.Icon
-              $theme={theme}
-              $color={error && "danger"}
-              type="button"
-              onClick={onClick}
-            >
-              <SearchOutlinedIcon />
-            </Styled.Icon>
-          )}
-          {error && (
-            <Styled.ErrorSpan $theme={theme}>{errorMessage}</Styled.ErrorSpan>
-          )}
-        </Styled.InputContainer>
+              type={showPassword ? "text" : type}
+              readOnly={readOnly}
+              id={id}
+              placeholder={placeholder}
+              {...register}
+            />
+            {type === "password" && (
+              <Styled.Icon
+                $theme={theme}
+                $color={error && "danger"}
+                type="button"
+                onClick={handleShowPassword}
+              >
+                {!showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+              </Styled.Icon>
+            )}
+            {cep === true && (
+              <Styled.Icon
+                $theme={theme}
+                $color={error && "danger"}
+                type="button"
+                onClick={onClick}
+              >
+                <SearchOutlinedIcon />
+              </Styled.Icon>
+            )}
+            {error && (
+              <Styled.ErrorSpan $theme={theme}>{errorMessage}</Styled.ErrorSpan>
+            )}
+          </Styled.InputContainer>
+        </>
       )}
 
       {type === "textarea" && (
-        <Styled.TextArea
-          $theme={theme}
-          $color={error && "danger"}
-          readOnly={readOnly}
-          id={id}
-          placeholder={placeholder}
-          {...register}
-        />
+        <>
+          <Styled.Label $theme={theme} $color={error && "danger"} htmlFor={id}>
+            {label}
+          </Styled.Label>
+          <Styled.TextArea
+            $theme={theme}
+            $color={error && "danger"}
+            readOnly={readOnly}
+            id={id}
+            placeholder={placeholder}
+            {...register}
+          />
+          {error && (
+            <Styled.ErrorSpan $theme={theme}>{errorMessage}</Styled.ErrorSpan>
+          )}
+        </>
       )}
     </Styled.InputGroup>
   );
@@ -97,4 +124,11 @@ InputComponent.propTypes = {
   register: PropTypes.any,
   error: PropTypes.any,
   errorMessage: PropTypes.any,
+  // Add prop types for new props
+  mask: PropTypes.any,
+  readOnly: PropTypes.bool,
+  as: PropTypes.any,
+  onInput: PropTypes.func,
+  cep: PropTypes.bool,
+  onClick: PropTypes.func,
 };
