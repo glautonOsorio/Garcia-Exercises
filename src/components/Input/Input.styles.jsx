@@ -1,10 +1,33 @@
 import styled from "styled-components";
 
+// CheckboxInput and CheckboxLabel styled-components
+export const CheckboxInput = styled.input`
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  width: 1.5rem;
+  height: 1.5rem;
+`;
+
+export const CheckboxLabel = styled.label`
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: flex-start; /* Align checkbox label to the start */
+  color: ${({ $color, $theme }) =>
+    $color === "danger" ? $theme.error : $theme.text};
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer; /* Add pointer cursor for better UX */
+`;
+
+// Input, Label, InputGroup, ErrorSpan styled-components
 export const InputGroup = styled.div`
   position: relative; /* Ensure relative positioning for ErrorSpan */
   display: flex;
   width: 100%;
-  flex-direction: column;
+  flex-direction: ${({ $type }) => ($type === "checkbox" ? "row" : "column")};
   align-items: flex-start;
   gap: 0.5rem;
 `;
@@ -35,7 +58,11 @@ export const Input = styled.input`
   color: ${({ $color }) => ($color === "danger" ? "#DC143C" : "#000")};
   width: 100%;
   height: 3rem;
+
+  /* Conditionally hide checkbox input */
+  ${({ $type }) => $type === "checkbox" && "display: none;"}
 `;
+
 export const TextArea = styled.textarea`
   display: flex;
   padding: 0.5rem;
@@ -47,7 +74,8 @@ export const TextArea = styled.textarea`
       $color === "danger" ? $theme.error : $theme.tertiary};
   color: ${({ $color, $theme }) =>
     $color === "danger" ? $theme.error : $theme.text};
-  height: 5rem;
+  height: 6rem;
+  overflow-y: auto;
 `;
 
 export const InputContainer = styled.div`
