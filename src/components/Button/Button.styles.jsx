@@ -14,11 +14,7 @@ export const ButtonGroup = styled.div`
 export const NewButton = styled(Button)`
   width: 100%;
   background-color: ${({ $theme, $preset }) =>
-    $preset === "delete"
-      ? $theme.error
-      : $preset === "save"
-      ? $theme.success
-      : $theme.tertiary} !important;
+    $preset === "delete" ? $theme.error : $theme.success} !important;
   color: ${({ $theme }) => $theme.text} !important;
   font-size: 0.8rem !important;
 `;

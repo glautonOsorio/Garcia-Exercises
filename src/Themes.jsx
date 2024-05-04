@@ -5,9 +5,9 @@ export const darkTheme = {
   tertiary: "#2196F3",
   text: "#FFFFFF",
   accent: "#FF4081",
-  success: "#00FF00",
-  warning: "#FFC107",
-  error: "#FF0000",
+  success: "#66ff66",
+  warning: "#E67E22",
+  error: "#DC143C",
 };
 
 export const lightTheme = {
@@ -17,7 +17,7 @@ export const lightTheme = {
   tertiary: "#FA441E",
   text: "#000",
   accent: "#3E92CC ",
-  success: "#66ff66",
-  warning: "#E67E22",
-  error: "#DC143C",
+  success: "#00FF00",
+  warning: "#FFC107",
+  error: "#FF0000",
 };

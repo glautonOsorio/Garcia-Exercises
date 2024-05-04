@@ -44,8 +44,8 @@ export const MapComponent = () => {
           locations.map((local, index) => (
             <Marker
               position={[
-                local.coordinates.latitude,
-                local.coordinates.longitude,
+                Number(local.coordinates.latitude),
+                Number(local.coordinates.longitude),
               ]}
               key={index}
               icon={customIcon}
@@ -62,13 +62,16 @@ export const MapComponent = () => {
                     <Styled.PopupSpan $theme={theme}>
                       {local.location}
                     </Styled.PopupSpan>
-                    <Styled.PopupRow>
-                      {Object.values(local.sports_types).map((sport, index) => (
-                        <Styled.PopupSportType $theme={theme} key={index}>
-                          {sport}
-                        </Styled.PopupSportType>
-                      ))}
-                    </Styled.PopupRow>
+                    <Styled.PopupGrid>
+                      {Object.values(local.sports_types).map(
+                        (sport, index) =>
+                          sport.hasOption && (
+                            <Styled.PopupSportType $theme={theme} key={index}>
+                              {sport.name}
+                            </Styled.PopupSportType>
+                          )
+                      )}
+                    </Styled.PopupGrid>
                     <Styled.PopupSpan $theme={theme}>
                       {local.description}
                     </Styled.PopupSpan>
