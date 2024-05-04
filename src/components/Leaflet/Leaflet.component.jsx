@@ -2,13 +2,12 @@ import * as Styled from "./Leaflet.styles";
 import "leaflet/dist/leaflet.css";
 import "./Map.css";
 
-
-import {  TileLayer, Marker } from "react-leaflet";
+import { TileLayer, Marker } from "react-leaflet";
 
 import MarkerClusterGroup from "react-leaflet-cluster";
 
 import { Icon, divIcon, point } from "leaflet";
-import { useContext  } from "react";
+import { useContext } from "react";
 import { LocationContext } from "../../contexts/Locations.context";
 import { ThemeContext } from "../../contexts/Theme.context";
 
@@ -52,18 +51,27 @@ export const MapComponent = () => {
               icon={customIcon}
             >
               <Styled.StyledPopup $theme={theme}>
-                <Styled.PopupContainer>
+                <Styled.PopupContainer $theme={theme}>
+                  <Styled.CloseButton $theme={theme}>
+                    &times;
+                  </Styled.CloseButton>
                   <Styled.PopupTitle $theme={theme}>
                     {local.name}
                   </Styled.PopupTitle>
                   <Styled.PopupContent>
-                    <Styled.PopupSpan $theme={theme}>{local.location}</Styled.PopupSpan>
+                    <Styled.PopupSpan $theme={theme}>
+                      {local.location}
+                    </Styled.PopupSpan>
                     <Styled.PopupRow>
                       {Object.values(local.sports_types).map((sport, index) => (
-                        <Styled.PopupSportType  $theme={theme} key={index}>{sport}</Styled.PopupSportType>
+                        <Styled.PopupSportType $theme={theme} key={index}>
+                          {sport}
+                        </Styled.PopupSportType>
                       ))}
                     </Styled.PopupRow>
-                    <Styled.PopupSpan $theme={theme}>{local.description}</Styled.PopupSpan>
+                    <Styled.PopupSpan $theme={theme}>
+                      {local.description}
+                    </Styled.PopupSpan>
                   </Styled.PopupContent>
                 </Styled.PopupContainer>
               </Styled.StyledPopup>

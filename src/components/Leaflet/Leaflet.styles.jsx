@@ -8,46 +8,27 @@ export const StyledMapContainer = styled(MapContainer)`
 `;
 
 export const StyledPopup = styled(Popup)`
-  height: 10rem;
-  width: 24rem;
-  background-color: ${({ $theme }) => $theme.secondary} !important;
-  border-radius: 2rem;
-  padding: 1rem;
-
-  .leaflet-popup-close-button {
-    position: relative !important;
-    top: -9.5rem !important;
-    left: 10.5rem !important;
-    font-size: 2rem !important;
-    font-weight: 900;
-    color: ${({ $theme }) => $theme.text} !important;
-  }
+  height: auto;
+  width: auto;
 `;
 
 export const PopupContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 100%;
-  width: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: ${({ $theme }) => $theme.secondary};
 `;
 
 export const PopupTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  color: ${({ $theme }) => $theme.text} !important;
-  @media (max-width: 1024px) {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
+  color: ${({ $theme }) => $theme.text};
+  margin-bottom: 0.5rem; /* Adding margin bottom to separate from content */
 `;
 
 export const PopupContent = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   text-align: center;
   justify-content: flex-start;
 `;
@@ -56,10 +37,8 @@ export const PopupSpan = styled.span`
   font-size: 0.8rem;
   font-weight: 400;
   color: ${({ $theme }) => $theme.text};
-
-  @media (max-width: 1024px) {
-    font-size: 0.8rem;
-  }
+  max-height: 100px; /* Set maximum height for the text */
+  overflow-y: auto; /* Add vertical overflow scrolling if needed */
 `;
 
 export const PopupRow = styled.div`
@@ -67,7 +46,6 @@ export const PopupRow = styled.div`
   flex-direction: row;
   gap: 1rem;
   justify-content: center;
-  
 `;
 
 export const PopupSportType = styled.span`
@@ -76,9 +54,13 @@ export const PopupSportType = styled.span`
   color: ${({ $theme }) => $theme.text};
   background-color: ${({ $theme }) => $theme.tertiary};
   border-radius: 1rem;
+`;
 
-
-  @media (max-width: 1024px) {
-    font-size: 0.8rem;
-  }
+export const CloseButton = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: ${({ $theme }) => $theme.text};
 `;
