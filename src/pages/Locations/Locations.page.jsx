@@ -1,7 +1,9 @@
+import * as Styled from "../Pages.styles";
+
 export const LocationsPage = () => {
   return (
-    <div>
+    <Styled.PageContainer>
       <h1>Locations Page</h1>
-    </div>
+    </Styled.PageContainer>
   );
 };

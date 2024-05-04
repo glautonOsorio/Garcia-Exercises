@@ -9,17 +9,25 @@ import { selectGender } from "../../../helper/selectInstance.jsx";
 import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
 import { ButtonComponent } from "../../Button/Button.component.jsx";
 import { AuthContext } from "../../../contexts/Auth.context.jsx";
-import { unformatCPF } from "../../../helper/cpfInstance.jsx";
-import { Store } from "../../../services/Users/Users.services.jsx";
+import { unformatCPF, formatCPF } from "../../../helper/cpfInstance.jsx";
+import {
+  GetID,
+  Update,
+  Store,
+  Delete,
+  GetUsers,
+} from "../../../services/Users/Users.services.jsx";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const RegisterUser = () => {
   const { theme } = useContext(ThemeContext);
   const { showLogin } = useContext(LoginContext);
-  const { users } = useContext(AuthContext);
+  const { users, user, setUsers } = useContext(AuthContext);
   const [disabled, setDisabled] = useState(true);
-
+  const { id } = useParams();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -28,6 +36,43 @@ export const RegisterUser = () => {
     watch,
     formState: { errors },
   } = useForm();
+
+  useEffect(() => {
+    if (id) {
+      GetID(id).then((res) => {
+        if (!res) {
+          console.log("No user found");
+          toast.error("Nenhum usuário encontrado", {
+            position: "top-center",
+            theme: "colored",
+            autoClose: 2000,
+          });
+          navigate("/");
+          return;
+        } else if (res.id !== user.id) {
+          console.log("Unauthorized access");
+          toast.error("Você não é autorizado a editar esses dados", {
+            position: "top-center",
+            theme: "colored",
+            autoClose: 2000,
+          });
+          navigate("/");
+          return;
+        }
+        setValue("name", res.name);
+        setValue("cpf", formatCPF(res.cpf));
+        setValue("birth_date", res.birth_date);
+        setValue("gender", res.gender || "");
+        setValue("email", res.email);
+        setValue("zipcode", res.zipcode);
+        setValue("address", res.address);
+        setValue("number", res.number);
+        setValue("neighborhood", res.neighborhood);
+        setValue("city", res.city);
+        setValue("state", res.state);
+      });
+    }
+  }, []);
 
   const handleCep = async () => {
     const cep = getValues("zipcode");
@@ -61,9 +106,69 @@ export const RegisterUser = () => {
     });
     showLogin();
   };
+
+  const UpdateUser = async (data) => {
+    try {
+      const body = { ...data };
+      await Update(id, body);
+      await GetUsers().then((res) => {
+        setUsers(res);
+      });
+      toast.success("Usuario editado com sucesso", {
+        position: "bottom-right",
+        theme: "colored",
+        autoClose: 2000,
+      });
+      navigate("/");
+    } catch (error) {
+      if (error.response && error.response.data) {
+        toast.error(`Erro ao editar ${error.response.data.message}`, {
+          position: "top-center",
+          theme: "colored",
+          autoClose: 2000,
+        });
+      } else {
+        toast.error(`Erro ao editar: ${error.message}`, {
+          position: "top-center",
+          theme: "colored",
+          autoClose: 2000,
+        });
+      }
+    }
+  };
+
+  const DeleteUser = async () => {
+    try {
+      await Delete(id);
+      toast.success("Local deletado com sucesso", {
+        position: "bottom-right",
+        theme: "colored",
+        autoClose: 2000,
+      });
+      navigate("/");
+    } catch (error) {
+      if (error.response && error.response.data) {
+        toast.error(`Erro ao deletar ${error.response.data.message}`, {
+          position: "top-center",
+          theme: "colored",
+          autoClose: 2000,
+        });
+      } else {
+        toast.error(`Erro ao deletar: ${error.message}`, {
+          position: "top-center",
+          theme: "colored",
+          autoClose: 2000,
+        });
+      }
+    }
+  };
+
   return (
     <>
-      <Styled.Form $theme={theme} onSubmit={handleSubmit(Register)}>
+      <Styled.Form
+        $theme={theme}
+        onSubmit={handleSubmit(id ? UpdateUser : Register)}
+      >
         <Styled.FormTitle $theme={theme}>
           Preencha os campos para cadastrar o Usuario
         </Styled.FormTitle>
@@ -153,45 +258,50 @@ export const RegisterUser = () => {
               error={!!errors.email}
               errorMessage={errors.email?.message}
             />
-            <InputComponent
-              id="password"
-              type="password"
-              label="Senha"
-              placeholder="Digite uma senha"
-              register={{
-                ...register("password", {
-                  required: "Campo obrigatório",
-                  minLength: {
-                    value: 6,
-                    message: "Campo precisa ter acima de 6 caracteres",
-                  },
-                }),
-              }}
-              error={!!errors.password}
-              errorMessage={errors.password?.message}
-            />
-            <InputComponent
-              id="passwordVerify"
-              type="password"
-              label="Confirma senha"
-              placeholder="Digite a mesma senha"
-              register={{
-                ...register("passwordVerify", {
-                  required: "Campo obrigatório",
-                  minLength: {
-                    value: 6,
-                    message: "Campo precisa ter acima de 6 caracteres",
-                  },
-                  validate: (val) => {
-                    if (watch("password") != val) {
-                      return "As senhas estão diferentes";
-                    }
-                  },
-                }),
-              }}
-              error={!!errors.passwordVerify}
-              errorMessage={errors.passwordVerify?.message}
-            />
+
+            {!id && (
+              <>
+                <InputComponent
+                  id="password"
+                  type="password"
+                  label="Senha"
+                  placeholder="Digite uma senha"
+                  register={{
+                    ...register("password", {
+                      required: "Campo obrigatório",
+                      minLength: {
+                        value: 6,
+                        message: "Campo precisa ter acima de 6 caracteres",
+                      },
+                    }),
+                  }}
+                  error={!!errors.password}
+                  errorMessage={errors.password?.message}
+                />
+                <InputComponent
+                  id="passwordVerify"
+                  type="password"
+                  label="Confirma senha"
+                  placeholder="Digite a mesma senha"
+                  register={{
+                    ...register("passwordVerify", {
+                      required: "Campo obrigatório",
+                      minLength: {
+                        value: 6,
+                        message: "Campo precisa ter acima de 6 caracteres",
+                      },
+                      validate: (val) => {
+                        if (watch("password") != val) {
+                          return "As senhas estão diferentes";
+                        }
+                      },
+                    }),
+                  }}
+                  error={!!errors.passwordVerify}
+                  errorMessage={errors.passwordVerify?.message}
+                />
+              </>
+            )}
           </Styled.FormRow>
           <Styled.FormRow>
             <InputComponent
@@ -292,36 +402,38 @@ export const RegisterUser = () => {
           </Styled.FormRow>
         </Styled.FormColumn>
         <Styled.ButtonWrapper>
-          {false && (
-              <ButtonComponent
-                type={"button"}
-                text={"Editar"}
-                preset={"edit"}
-                variant={"outlined"}
-                disabled={true}
-              />
-            ) && (
+          {id ? (
+            <>
               <ButtonComponent
                 type={"button"}
                 text={"Deletar"}
                 preset={"delete"}
+                onClick={DeleteUser}
                 variant={"outlined"}
-                disabled={true}
               />
-            )}
-          <ButtonComponent
-            type={"submit"}
-            text={"Cadastrar"}
-            preset={"save"}
-            variant={"outlined"}
-          />
-
-          <ButtonComponent
-            type={"submit"}
-            text={"  Voltar para o login?"}
-            variant={"outlined"}
-            onClick={showLogin}
-          />
+              <ButtonComponent
+                type={"submit"}
+                text={"Editar"}
+                preset={"edit"}
+                variant={"outlined"}
+              />
+            </>
+          ) : (
+            <>
+              <ButtonComponent
+                type={"submit"}
+                text={"Cadastrar"}
+                preset={"save"}
+                variant={"outlined"}
+              />
+              <ButtonComponent
+                type={"submit"}
+                text={"  Voltar para o login?"}
+                variant={"outlined"}
+                onClick={showLogin}
+              />
+            </>
+          )}
         </Styled.ButtonWrapper>
       </Styled.Form>
     </>

@@ -1,10 +1,10 @@
 import { RegisterLocationComponent } from "../../components/Forms/Location/RegisterLocation.component";
-import * as Styled from "./RegisterLocation.styles";
+import * as Styled from "../Pages.styles";
 
 export const RegisterLocationPage = () => {
   return (
-    <Styled.RegisterLocationContainer>
+    <Styled.PageContainer>
       <RegisterLocationComponent />
-    </Styled.RegisterLocationContainer>
+    </Styled.PageContainer>
   );
 };
