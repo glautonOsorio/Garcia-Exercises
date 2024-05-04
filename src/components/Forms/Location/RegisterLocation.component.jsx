@@ -55,7 +55,6 @@ export const RegisterLocationComponent = () => {
           navigate("/");
           return;
         }
-
         setValue("name", res.name);
         setValue("description", res.description);
         setValue("zipcode", res.zipcode);
@@ -116,7 +115,7 @@ export const RegisterLocationComponent = () => {
   const UpdateLocal = async (data) => {
     try {
       const body = { ...data, user_id: user.id };
-      await Update(body);
+      await Update(id, body);
       await GetLocations().then((res) => {
         setLocations(res);
       });

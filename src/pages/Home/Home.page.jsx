@@ -1,12 +1,12 @@
 import { MapComponent } from "../../components/Leaflet/Leaflet.component";
-import * as Styled from "./Home.styles";
+import * as Styled from "../Pages.styles";
 
 export const HomePage = () => {
   return (
-    <Styled.HomeContainer>
+    <Styled.PageContainer>
       <h1>Home Page is Page</h1>
 
-      <MapComponent/>
-    </Styled.HomeContainer>
+      <MapComponent />
+    </Styled.PageContainer>
   );
 };

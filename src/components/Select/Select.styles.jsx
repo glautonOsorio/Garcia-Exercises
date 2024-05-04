@@ -33,24 +33,22 @@ export const FormSelect = styled.select`
     ${({ $color, $theme }) => {
       return $color === "danger" ? $theme.error : $theme.tertiary;
     }};
-  color: ${({ $color, $theme }) => {
-    return $color === "danger" ? $theme.error : $theme.text;
-  }};
+
+  color: ${({ $color }) => ($color === "danger" ? "#DC143C" : "#000")};
   width: 100%;
   font-size: 1rem;
   height: 3rem;
-  background-color: ${({ $theme }) => {
-    $theme.tertiary;
-  }};
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 `;
 
 export const SelectOption = styled.option`
-  color: ${({ $color, $theme }) => {
-    return $color === "danger" ? $theme.error : $theme.text;
-  }};
+  color: ${({ $color }) => ($color === "danger" ? "#DC143C" : "#000")};
+  border: 1px solid
+    ${({ $color, $theme }) => {
+      return $color === "danger" ? $theme.error : $theme.tertiary;
+    }};
   background-color: transparent;
   display: flex;
   font-size: 1.5;

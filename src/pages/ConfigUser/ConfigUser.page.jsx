@@ -1,7 +1,10 @@
+import { RegisterUser } from "../../components/Forms/RegisterUser/RegisterUser.component";
+import * as Styled from "../Pages.styles";
+
 export const ConfigUserPage = () => {
   return (
-    <div>
-      <h1>Config User</h1>
-    </div>
+    <Styled.PageContainer>
+      <RegisterUser />
+    </Styled.PageContainer>
   );
 };
