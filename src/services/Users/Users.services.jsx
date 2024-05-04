@@ -64,11 +64,11 @@ export const Store = async (data) => {
       state: data.state,
     })
     .then(async () => {
-      alert("Usuário cadastrado com sucesso");
+      return "Usuário cadastrado com sucesso";
     })
     .catch((err) => {
       console.log("err: ", err.response.data);
-      alert(`Erro ao cadastrar ${err.response.data.message}`);
+      console.log(`Erro ao cadastrar ${err.response.data.message}`);
     });
 };
 
@@ -76,7 +76,7 @@ export const Delete = async (id) => {
   await axiosInstance
     .delete(`/users/${id}`)
     .then(() => {
-      alert("Usuário removido com sucesso");
+      return "Usuário removido com sucesso";
     })
     .catch((err) => {
       console.log("err: ", err.response.data);
@@ -103,10 +103,10 @@ export const Update = async (id, newData) => {
   await axiosInstance
     .put(`/users/${id}`, data)
     .then(() => {
-      alert("Atualizado com sucesso");
+      return "Atualizado com sucesso";
     })
     .catch((err) => {
       console.log("err: ", err);
-      alert(`Erro ao atualizar ${err.message}`);
+      console.log(`Erro ao atualizar ${err.message}`);
     });
 };

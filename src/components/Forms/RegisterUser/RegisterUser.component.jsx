@@ -11,6 +11,8 @@ import { ButtonComponent } from "../../Button/Button.component.jsx";
 import { AuthContext } from "../../../contexts/Auth.context.jsx";
 import { unformatCPF } from "../../../helper/cpfInstance.jsx";
 import { Store } from "../../../services/Users/Users.services.jsx";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const RegisterUser = () => {
   const { theme } = useContext(ThemeContext);
@@ -42,11 +44,21 @@ export const RegisterUser = () => {
       (user) => user.cpf == unformatCPF(data.cpf) || user.email == data.email
     );
     if (repeatUser != null) {
-      return alert("Usuário ja cadastrado! Por Favor inserir novos dados");
+      toast.error("Usuário ja cadastrado! Por Favor inserir novos dados", {
+        position: "top-center",
+        theme: "colored",
+        autoClose: 2000,
+      });
+      return;
     }
 
     const body = { ...data };
     await Store(body);
+    toast.success("Usuário cadastrado com sucesso", {
+      position: "bottom-right",
+      theme: "colored",
+      autoClose: 2000,
+    });
     showLogin();
   };
   return (
@@ -194,8 +206,8 @@ export const RegisterUser = () => {
                 ...register("zipcode", {
                   required: "Campo obrigatório",
                   maxLength: {
-                    value: 8,
-                    message: "Campo precisa ter até de 8 caracteres",
+                    value: 9,
+                    message: "Campo precisa ter até de 9 caracteres",
                   },
                   minLength: {
                     value: 8,
@@ -205,7 +217,7 @@ export const RegisterUser = () => {
               }}
               error={!!errors.zipcode}
               errorMessage={errors.zipcode?.message}
-            ></InputComponent>
+            />
             <InputComponent
               id="city"
               name="city"
