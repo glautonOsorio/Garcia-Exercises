@@ -98,65 +98,48 @@
     {
       "user_id": 1,
       "name": "Local de Exercício 1",
-      "description": "Descrição do Local de Exercício 1",
+      "description": "Descrição dossssssssssssssssssss Local de Exercício 1Descrição do Local de Exercício 1Descrição do Local de Exercício 1Descrição do Local de Exercício 1Descrição do Local de Exercício 1Descrição do Local de Exercício 1",
       "location": "Rua Maria Isabel Maia Pio dos Santos, 213 - Serraria, Maceió - AL, 57046-545",
       "coordinates": {
-        "latitude": -9.568194,
-        "longitude": -35.749274
+        "latitude": -8.568194,
+        "longitude": -36.749274
       },
-      "sports_types": [
-        {
-          "type": "musculação"
-        },
-        {
-          "type": "futebol"
-        },
-        {
-          "type": "natação"
-        }
-      ]
+      "sports_types": {
+        "option1": "musculação",
+        "option2": " futebol",
+        "option3": "natação"
+      }
     },
     {
       "user_id": 2,
       "name": "Local de Exercício 3",
-      "description": "Descrição do Local de Exercício 1",
+      "description": "Descrição do Local escrição dossssssssssssssssssss Loca Exercício 1",
       "location": "Rua Maria Isabel Maia Pio dos Santos, 213 - Serraria, Maceió - AL, 57046-545",
       "coordinates": {
-        "latitude": -9.568194,
-        "longitude": -35.749274
+        "latitude": -7.568194,
+        "longitude": -34.749274
       },
-      "sports_types": [
-        {
-          "type": "musculação"
-        },
-        {
-          "type": "futebol"
-        },
-        {
-          "type": "natação"
-        }
-      ]
+      "sports_types": {
+        "option1": "musculação",
+        "option2": " futebol",
+        "option3": "natação"
+      }
     },
     {
       "user_id": 3,
       "name": "Local de Exercício 3",
-      "description": "Descrição do Local de Exercício 1",
+      "description": "Descriçãescrição dossssssssssssssssssss Loescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaescrição dossssssssssssssssssss Locaca",
       "location": "Rua Maria Isabel Maia Pio dos Santos, 213 - Serraria, Maceió - AL, 57046-545",
       "coordinates": {
         "latitude": -9.568194,
         "longitude": -35.749274
       },
-      "sports_types": [
-        {
-          "type": "musculação"
-        },
-        {
-          "type": "futebol"
-        },
-        {
-          "type": "natação"
-        }
-      ]
+
+      "sports_types": {
+        "option1": "musculação",
+        "option2": " futebol",
+        "option3": "natação"
+      }
     }
   ]
 }
