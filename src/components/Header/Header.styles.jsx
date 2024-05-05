@@ -91,10 +91,12 @@ export const LoggedIconMan = styled(PersonIcon)`
   font-size: 3.5rem !important;
   border: 0.2rem solid ${({ $theme }) => $theme.secondary} !important;
   border-radius: 2rem;
+  color: ${({ $theme }) => $theme.text} !important;
   background-color: ${({ $theme }) => $theme.secondary} !important;
 `;
 export const LoggedIconWoman = styled(Person3Icon)`
   font-size: 3.5rem !important;
+  color: ${({ $theme }) => $theme.text} !important;
   border: 0.2rem solid ${({ $theme }) => $theme.secondary} !important;
   border-radius: 2rem;
   background-color: ${({ $theme }) => $theme.secondary} !important;

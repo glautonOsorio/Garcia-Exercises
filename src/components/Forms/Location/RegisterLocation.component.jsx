@@ -18,11 +18,12 @@ import {
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useParams } from "react-router-dom";
+import { LocationContext } from "../../../contexts/Locations.context.jsx";
 
 export const RegisterLocationComponent = () => {
   const { theme } = useContext(ThemeContext);
   const { user } = useContext(AuthContext);
-  const { locations, setLocations } = useContext(AuthContext);
+  const { locations, setLocations } = useContext(LocationContext);
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   const { id } = useParams();

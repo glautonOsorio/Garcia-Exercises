@@ -41,7 +41,6 @@ export const RegisterUser = () => {
     if (id) {
       GetID(id).then((res) => {
         if (!res) {
-          console.log("No user found");
           toast.error("Nenhum usuário encontrado", {
             position: "top-center",
             theme: "colored",
@@ -61,8 +60,8 @@ export const RegisterUser = () => {
         }
         setValue("name", res.name);
         setValue("cpf", formatCPF(res.cpf));
-        setValue("birth_date", res.birth_date);
-        setValue("gender", res.gender || "");
+        setValue("birthday", res.birthday);
+        setValue("gender", res.gender);
         setValue("email", res.email);
         setValue("zipcode", res.zipcode);
         setValue("address", res.address);
@@ -109,6 +108,19 @@ export const RegisterUser = () => {
 
   const UpdateUser = async (data) => {
     try {
+      const repeatUser = users.find(
+        (user) =>
+          (user.cpf == unformatCPF(data.cpf) && user.id != id) ||
+          (user.email == data.email && user.id != id)
+      );
+      if (repeatUser != null) {
+        toast.error("Usuário ja cadastrado! Por Favor inserir novos dados", {
+          position: "top-center",
+          theme: "colored",
+          autoClose: 2000,
+        });
+        return;
+      }
       const body = { ...data };
       await Update(id, body);
       await GetUsers().then((res) => {
@@ -140,7 +152,7 @@ export const RegisterUser = () => {
   const DeleteUser = async () => {
     try {
       await Delete(id);
-      toast.success("Local deletado com sucesso", {
+      toast.success("Usuario deletado com sucesso", {
         position: "bottom-right",
         theme: "colored",
         autoClose: 2000,
