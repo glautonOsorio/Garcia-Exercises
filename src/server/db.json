@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Joaquim Fernando Henrique Moura",
       "cpf": "60161407757",
-      "birth_date": "10/01/2004",
+      "birthday": "10/01/2004",
       "gender": "Male",
       "email": "joaquim_moura@hotmail.con",
       "password": "yNgBTXIp0C",
@@ -18,7 +18,7 @@
     {
       "name": "Raimundo Sebastiano de Paula",
       "cpf": "89060781023",
-      "birth_date": "23/04/1945",
+      "birthday": "23/04/1945",
       "gender": "male",
       "email": "raimunda.sebastiana.depaula@aol.com",
       "zipcode": "78150-538",
@@ -27,13 +27,13 @@
       "neighborhood": "Santa Isabel",
       "city": "Várzea Grande",
       "state": "MT",
-      "id": "2"
+      "id": 2
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Sandra Brenda Adriana da Mata",
       "cpf": "01241669708",
-      "birth_date": "15/01/1978",
+      "birthday": "15/01/1978",
       "gender": "Female",
       "email": "sandrabrendadamata@smbcontabil.com.br",
       "password": "QdR2jGBrrQ",
@@ -45,10 +45,10 @@
       "state": "PA"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Luan José da Costa",
       "cpf": "28004766641",
-      "birth_date": "26/01/1985",
+      "birthday": "26/01/1985",
       "gender": "Male",
       "email": "luan-dacosta76@imobiliariamaciel.com.br",
       "password": "bWU2gCIdSx",
@@ -60,10 +60,10 @@
       "state": "TO"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Sara Nair Rita Santos",
       "cpf": "01888333154",
-      "birth_date": "21/01/1958",
+      "birthday": "21/01/1958",
       "gender": "Female",
       "email": "sara_nair_santos@zf.com",
       "password": "028Fkjx1lL",
@@ -77,7 +77,7 @@
     {
       "name": "Banana Fernando Henrique Moura",
       "cpf": "60161407757",
-      "birth_date": "10/01/2004",
+      "birthday": "10/01/2004",
       "gender": "Male",
       "email": "joaquim_moura@hotmail.con",
       "password": "yNgBTXIp0C",
@@ -87,13 +87,14 @@
       "neighborhood": "Serraria",
       "city": "Maceió",
       "state": "AL",
-      "id": "7"
+      "id": 7
     },
     {
       "name": "Testestesteast",
       "cpf": "12345879884",
       "gender": "female",
       "email": "testestes@testes.com",
+      "birthday": "10/01/2004",
       "password": "123456",
       "zipcode": "38401466",
       "address": "Rua Joaquim Clemente Oliveira",
@@ -101,7 +102,7 @@
       "neighborhood": "Maravilha",
       "city": "Uberlândia",
       "state": "MG",
-      "id": "8"
+      "id": 8
     }
   ],
   "locations": [
@@ -150,7 +151,7 @@
           "hasOption": false
         }
       ],
-      "id": "1"
+      "id": 1
     },
     {
       "user_id": 1,
@@ -197,7 +198,7 @@
           "hasOption": false
         }
       ],
-      "id": "2"
+      "id": 2
     },
     {
       "user_id": 5,
@@ -244,7 +245,7 @@
           "hasOption": false
         }
       ],
-      "id": "3"
+      "id": 3
     },
     {
       "user_id": 5,
@@ -291,7 +292,7 @@
           "hasOption": false
         }
       ],
-      "id": "4"
+      "id": 4
     },
     {
       "user_id": 5,
@@ -338,7 +339,7 @@
           "hasOption": false
         }
       ],
-      "id": "5"
+      "id": 5
     },
     {
       "user_id": 5,
@@ -385,7 +386,7 @@
           "hasOption": false
         }
       ],
-      "id": "6"
+      "id": 6
     },
     {
       "user_id": 5,
@@ -436,7 +437,7 @@
           "hasOption": false
         }
       ],
-      "id": "7"
+      "id": 7
     },
     {
       "user_id": 5,
@@ -487,7 +488,7 @@
           "hasOption": false
         }
       ],
-      "id": "8"
+      "id": 8
     },
     {
       "user_id": 5,
@@ -538,7 +539,7 @@
           "hasOption": false
         }
       ],
-      "id": "9"
+      "id": 9
     },
     {
       "user_id": 5,
@@ -589,7 +590,7 @@
           "hasOption": false
         }
       ],
-      "id": "10"
+      "id": 10
     },
     {
       "user_id": 5,
@@ -640,7 +641,7 @@
           "hasOption": false
         }
       ],
-      "id": "11"
+      "id": 11
     },
     {
       "user_id": 5,
@@ -691,7 +692,7 @@
           "hasOption": false
         }
       ],
-      "id": "12"
+      "id": 12
     },
     {
       "user_id": 5,
@@ -742,7 +743,7 @@
           "hasOption": false
         }
       ],
-      "id": "13"
+      "id": 13
     },
     {
       "user_id": 5,
@@ -793,7 +794,7 @@
           "hasOption": false
         }
       ],
-      "id": "14"
+      "id": 14
     },
     {
       "user_id": 5,
@@ -844,7 +845,7 @@
           "hasOption": false
         }
       ],
-      "id": "15"
+      "id": 15
     },
     {
       "user_id": 5,
@@ -895,7 +896,7 @@
           "hasOption": false
         }
       ],
-      "id": "16"
+      "id": 16
     },
     {
       "user_id": 5,
@@ -946,7 +947,7 @@
           "hasOption": false
         }
       ],
-      "id": "17"
+      "id": 17
     },
     {
       "user_id": 5,
@@ -997,7 +998,7 @@
           "hasOption": false
         }
       ],
-      "id": "18"
+      "id": 18
     },
     {
       "user_id": 5,
@@ -1048,7 +1049,7 @@
           "hasOption": true
         }
       ],
-      "id": "19"
+      "id": 19
     },
     {
       "user_id": 5,
@@ -1099,7 +1100,7 @@
           "hasOption": false
         }
       ],
-      "id": "21"
+      "id": 21
     },
     {
       "user_id": 5,
@@ -1150,7 +1151,7 @@
           "hasOption": false
         }
       ],
-      "id": "22"
+      "id": 22
     },
     {
       "user_id": 5,
@@ -1201,7 +1202,7 @@
           "hasOption": false
         }
       ],
-      "id": "23"
+      "id": 23
     },
     {
       "user_id": 5,
@@ -1252,7 +1253,7 @@
           "hasOption": false
         }
       ],
-      "id": "24"
+      "id": 24
     }
   ]
 }
