@@ -216,8 +216,8 @@ export const RegisterLocationComponent = () => {
             register={register("description", {
               required: "Campo obrigatório",
               maxLength: {
-                value: 64,
-                message: "Campo precisa ter menos de 64 caracteres",
+                value: 400,
+                message: "Campo precisa ter menos de 400 caracteres",
               },
             })}
             error={!!errors.description}
