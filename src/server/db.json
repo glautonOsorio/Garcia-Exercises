@@ -1254,6 +1254,162 @@
         }
       ],
       "id": 24
+    },
+    {
+      "user_id": 5,
+      "name": "Beira-mar Norte",
+      "description": "A Beira-Mar Norte oferece uma vista panorâmica da cidade e é ideal para caminhadas, corridas, ciclismo, remo e stand up paddle, com um calçadão espaçoso, ciclovia e águas calmas.",
+      "zipcode": "88015-702",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.5809381",
+        "longitude": "-48.5441383"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 25
+    },
+    {
+      "user_id": 5,
+      "name": " Lagoa da Conceição",
+      "description": "Este é outro local muito procurado para se exercitar em Florianópolis. Nos dias de bastante vento, a lagoa fica colorida devido a quantidade de praticantes de kitesurf. Quando a água está mais calma, as pranchas de stand up paddle é que se destacam.",
+      "zipcode": "88048-560",
+      "neighborhood": "Lagoa da Conceição",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.636809",
+        "longitude": "-48.4707556"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 26
+    },
+    {
+      "user_id": 5,
+      "name": " Parque de Coqueiros",
+      "description": "O Parque de Coqueiros é outro local ótimo para se exercitar em Florianópolis. Localizado na parte continental da cidade, ela tem espaço bem delimitado para caminhar ou correr e outro para bikes, roller e skates. E o melhor: respirando muito ar puro!",
+      "zipcode": "88080-010",
+      "neighborhood": "Coqueiros",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.5970132",
+        "longitude": "-48.570006"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 27
     }
   ]
 }

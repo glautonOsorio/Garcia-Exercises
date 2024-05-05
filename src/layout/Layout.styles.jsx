@@ -21,7 +21,7 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 1rem;
   background-color: ${({ $theme }) => $theme.background};
 `;
