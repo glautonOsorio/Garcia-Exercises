@@ -60,7 +60,7 @@ export const YourTrails = styled(PersonPinCircleIcon)`
 `;
 
 export const DashText = styled.h1`
-  font-size: 5rem;
+  font-size: 2.5rem;
   color: ${({ $theme }) => $theme.text};
 `;
 export const DashSubText = styled.span`

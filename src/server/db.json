@@ -245,53 +245,6 @@
           "hasOption": false
         }
       ],
-      "id": 3
-    },
-    {
-      "user_id": 5,
-      "name": "fassssssssssss",
-      "coordinates": {
-        "latitude": "-19.7532643",
-        "longitude": "-44.1487536"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": true
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
       "id": 4
     },
     {
@@ -1203,57 +1156,6 @@
         }
       ],
       "id": 23
-    },
-    {
-      "user_id": 5,
-      "name": "hedefdhfdffh",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": false
-        },
-        {
-          "name": "Futebol",
-          "hasOption": true
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": false
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 24
     },
     {
       "user_id": 5,
