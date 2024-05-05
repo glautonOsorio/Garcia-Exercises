@@ -1,8 +1,8 @@
 export const selectGender = [
   { value: "", label: "Selecione" },
-  { value: "male", label: "Masculino" },
-  { value: "female", label: "Feminino" },
-  { value: "other", label: "Outro" },
+  { value: "Male", label: "Masculino" },
+  { value: "Female", label: "Feminino" },
+  { value: "Other", label: "Outro" },
 ];
 
 export const checkBoxOptions = [

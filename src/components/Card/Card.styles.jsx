@@ -35,13 +35,19 @@ export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
+  min-width: 90%;
   gap: 1rem;
   padding: 0.5rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background-color: ${({ $theme }) => $theme.secondary};
   box-shadow: 0.2rem 0.2rem 0.2rem ${({ $theme }) => $theme.tertiary};
+  overflow-y: auto;
+  /* width */
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
 
   @media (max-width: 1200px) {
     padding: 0.5rem; // Adjusted padding for smaller screens
@@ -89,9 +95,9 @@ export const CardText = styled.span`
   color: ${({ $theme }) => $theme.text};
   font-weight: 400;
   font-size: 1rem;
+  height: fit-content;
   line-height: 1rem;
   padding: 1rem;
-  overflow-y: hidden;
 
   @media (max-width: 1200px) {
     font-size: 0.7rem;
@@ -99,8 +105,25 @@ export const CardText = styled.span`
 `;
 
 export const SportsChip = styled(Chip)`
-  background-color: ${({ $theme }) => $theme.accent} !important;
-  font-size: 1rem !important;
+  background-color: ${({ $theme }) => $theme.tertiary} !important;
+  font-size: 0.8rem !important;
   font-weight: 900 !important;
-  width: 8rem !important;
+  width: 6rem !important;
+`;
+
+export const CardButtonWrapper = styled.div`
+  position: relative;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 0.5rem;
+  gap: 0.5rem;
+  padding: 1rem;
+  justify-content: space-around;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;

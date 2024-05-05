@@ -17,6 +17,7 @@ export const InputComponent = ({
   error,
   mask,
   readOnly,
+  value,
   as,
   onInput,
   errorMessage,
@@ -62,6 +63,7 @@ export const InputComponent = ({
               as={as}
               $theme={theme}
               $color={error && "danger"}
+              defaultValue={value}
               type={showPassword ? "text" : type}
               readOnly={readOnly}
               id={id}

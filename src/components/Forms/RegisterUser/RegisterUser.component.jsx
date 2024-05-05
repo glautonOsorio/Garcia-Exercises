@@ -25,7 +25,6 @@ export const RegisterUser = () => {
   const { theme } = useContext(ThemeContext);
   const { showLogin } = useContext(LoginContext);
   const { users, user, setUsers } = useContext(AuthContext);
-  const [disabled, setDisabled] = useState(true);
   const { id } = useParams();
   const navigate = useNavigate();
   const {
@@ -248,6 +247,7 @@ export const RegisterUser = () => {
               register={{
                 ...register("birthday", { required: "Campo obrigatório" }),
               }}
+              value={getValues("birthday")}
               error={!!errors.birthday}
               errorMessage={errors.birthday?.message}
             />

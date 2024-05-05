@@ -21,8 +21,8 @@ export const DashboardComponent = () => {
       GetByUserId(res[0].id).then((r) => {
         setUserLocations(r);
       });
-    }, []);
-  });
+    });
+  }, []);
   return (
     <Styled.DashGrid>
       <Styled.DashColumn $theme={theme}>
