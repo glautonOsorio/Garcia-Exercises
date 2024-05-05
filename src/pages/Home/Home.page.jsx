@@ -5,9 +5,7 @@ import * as Styled from "../Pages.styles";
 export const HomePage = () => {
   return (
     <Styled.PageContainer>
-      {/*
       <DashboardComponent />
-      */}
       <MapComponent />
     </Styled.PageContainer>
   );
