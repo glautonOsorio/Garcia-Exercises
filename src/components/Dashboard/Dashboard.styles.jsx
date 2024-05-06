@@ -8,6 +8,20 @@ export const DashGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 15rem;
   padding: 2rem;
+
+  @media (max-width: 1024px) {
+    gap: 8rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const DashRow = styled.div`
@@ -16,9 +30,15 @@ export const DashRow = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 2.5rem;
+  padding: 1rem;
 
   @media (max-width: 1024px) {
     gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
@@ -27,7 +47,7 @@ export const DashColumn = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 16rem;
+  width: 100%;
   border-radius: 2.5rem;
   padding: 0.5rem;
   background-color: ${({ $theme }) => $theme.secondary};
@@ -52,6 +72,7 @@ export const Trails = styled(LocationOnIcon)`
   border-radius: 2rem;
   color: ${({ $theme }) => $theme.text} !important;
 `;
+
 export const YourTrails = styled(PersonPinCircleIcon)`
   font-size: 10rem !important;
   border: 0.2rem solid ${({ $theme }) => $theme.secondary} !important;
@@ -63,6 +84,7 @@ export const DashText = styled.h1`
   font-size: 2.5rem;
   color: ${({ $theme }) => $theme.text};
 `;
+
 export const DashSubText = styled.span`
   font-size: 1.5rem;
   color: ${({ $theme }) => $theme.text};

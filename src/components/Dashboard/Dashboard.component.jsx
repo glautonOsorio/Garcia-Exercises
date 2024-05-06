@@ -1,6 +1,3 @@
-import GroupIcon from "@mui/icons-material/Group";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import PersonPinCircleIcon from "@mui/icons-material/PersonPinCircle";
 import { AuthContext } from "../../contexts/Auth.context.jsx";
 import { LocationContext } from "../../contexts/Locations.context.jsx";
 import { useContext, useEffect, useState } from "react";
@@ -11,7 +8,7 @@ import * as Styled from "./Dashboard.styles.jsx";
 import { ThemeContext } from "../../contexts/Theme.context.jsx";
 
 export const DashboardComponent = () => {
-  const { users } = useContext(AuthContext);
+  const { users, isLogged } = useContext(AuthContext);
   const { locations } = useContext(LocationContext);
   const [userLocations, setUserLocations] = useState();
   const { theme } = useContext(ThemeContext);
@@ -24,7 +21,7 @@ export const DashboardComponent = () => {
     });
   }, []);
   return (
-    <Styled.DashGrid>
+    <Styled.DashRow>
       <Styled.DashColumn $theme={theme}>
         {users && users.length > 0 ? (
           <>
@@ -61,25 +58,29 @@ export const DashboardComponent = () => {
           </Styled.DashText>
         )}
       </Styled.DashColumn>
-      <Styled.DashColumn $theme={theme}>
-        {userLocations && userLocations.length > 0 ? (
-          <>
-            <Styled.DashRow>
-              <Styled.YourTrails $theme={theme} />
-              <Styled.DashText $theme={theme}>
-                {userLocations.length}
-              </Styled.DashText>
-            </Styled.DashRow>
-            <Styled.DashSubText $theme={theme}>
-              Você Cadastrou
-            </Styled.DashSubText>
-          </>
-        ) : (
-          <Styled.DashText $theme={theme}>
-            Você ainda não cadastrou nada
-          </Styled.DashText>
-        )}
-      </Styled.DashColumn>
-    </Styled.DashGrid>
+      {isLogged ? (
+        <Styled.DashColumn $theme={theme}>
+          {userLocations && userLocations.length > 0 ? (
+            <>
+              <Styled.DashRow>
+                <Styled.YourTrails $theme={theme} />
+                <Styled.DashText $theme={theme}>
+                  {userLocations.length}
+                </Styled.DashText>
+              </Styled.DashRow>
+              <Styled.DashSubText $theme={theme}>
+                Você Cadastrou
+              </Styled.DashSubText>
+            </>
+          ) : (
+            <Styled.DashText $theme={theme}>
+              Você ainda não cadastrou nada
+            </Styled.DashText>
+          )}
+        </Styled.DashColumn>
+      ) : (
+        <span></span>
+      )}
+    </Styled.DashRow>
   );
 };

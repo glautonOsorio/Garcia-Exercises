@@ -114,7 +114,8 @@ export const Update = async (id, newData) => {
   const data = {
     user_id: newData.user_id,
     name: newData.name,
-    description: newData.location,
+    description: newData.description,
+    location: newData.location,
     zipcode: newData.zipcode,
     neighborhood: newData.neighborhood,
     city: newData.city,

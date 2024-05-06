@@ -92,14 +92,14 @@ export const CardsComponent = ({ item, userId }) => {
               <Styled.CardButtonWrapper>
                 <ButtonComponent
                   type="button"
-                  text="Deletar Local"
+                  text="Deletar"
                   preset="delete"
                   variant="outlined"
                   onClick={DeleteLocal}
                 />
                 <ButtonComponent
                   type="submit"
-                  text="Editar Local"
+                  text="Editar"
                   preset="edit"
                   variant="outlined"
                   onClick={() => navigate(`/register-locations/${item.id}`)}

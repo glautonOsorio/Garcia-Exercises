@@ -25,6 +25,7 @@ export const RegisterUser = () => {
   const { theme } = useContext(ThemeContext);
   const { showLogin } = useContext(LoginContext);
   const { users, user, setUsers } = useContext(AuthContext);
+  const [pass, setPass] = useState();
   const { id } = useParams();
   const navigate = useNavigate();
   const {
@@ -62,6 +63,7 @@ export const RegisterUser = () => {
         setValue("birthday", res.birthday);
         setValue("gender", res.gender);
         setValue("email", res.email);
+        setPass(res.password);
         setValue("zipcode", res.zipcode);
         setValue("address", res.address);
         setValue("number", res.number);
@@ -120,7 +122,7 @@ export const RegisterUser = () => {
         });
         return;
       }
-      const body = { ...data };
+      const body = { ...data, password: pass };
       await Update(id, body);
       await GetUsers().then((res) => {
         setUsers(res);

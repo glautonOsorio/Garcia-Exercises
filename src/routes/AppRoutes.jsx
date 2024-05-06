@@ -6,6 +6,7 @@ import { Layout } from "../layout/Layout";
 import { LocationsPage } from "../pages/Locations/Locations.page";
 import { RegisterLocationPage } from "../pages/RegisterLocation/RegisterLocation.page";
 import { ConfigUserPage } from "../pages/ConfigUser/ConfigUser.page";
+import { ErrorPage } from "../pages/Error/Error.page";
 export const AppRouter = createBrowserRouter([
   {
     path: "/login",
@@ -17,6 +18,10 @@ export const AppRouter = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
       },
       {
         path: "/location-list",

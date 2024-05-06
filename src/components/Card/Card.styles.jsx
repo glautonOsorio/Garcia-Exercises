@@ -20,7 +20,7 @@ export const CardContainer = styled.div`
 
 export const StyledMapContainer = styled(MapContainer)`
   min-height: 100%;
-  min-width: 50% !important; // Adjusted width to fill the CardContainer
+  min-width: 50% !important;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 `;
@@ -29,7 +29,6 @@ export const StyledPopup = styled(Popup)`
   height: auto;
   width: auto;
 `;
-// File 4
 
 export const CardContent = styled.div`
   display: flex;
@@ -43,14 +42,13 @@ export const CardContent = styled.div`
   background-color: ${({ $theme }) => $theme.secondary};
   box-shadow: 0.2rem 0.2rem 0.2rem ${({ $theme }) => $theme.tertiary};
   overflow-y: auto;
-  /* width */
 
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
 
   @media (max-width: 1200px) {
-    padding: 0.5rem; // Adjusted padding for smaller screens
+    padding: 0.5rem;
   }
 `;
 
@@ -58,10 +56,12 @@ export const CardRow = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
+
   @media (max-width: 1200px) {
     flex-direction: column;
   }
 `;
+
 export const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -107,6 +107,7 @@ export const CardText = styled.span`
 export const SportsChip = styled(Chip)`
   background-color: ${({ $theme }) => $theme.tertiary} !important;
   font-size: 0.8rem !important;
+  color: ${({ $theme }) => $theme.text2} !important;
   font-weight: 900 !important;
   width: 6rem !important;
 `;

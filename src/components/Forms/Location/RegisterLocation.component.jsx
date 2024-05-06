@@ -78,8 +78,8 @@ export const RegisterLocationComponent = () => {
       setValue("state", data.uf);
       setValue("neighborhood", data.bairro);
       GetLongLati(data.logradouro, data.localidade, data.uf).then((d) => {
-        setValue("longitude", d[0].lon);
-        setValue("latitude", d[0].lat);
+        setValue("longitude", d[0].lon || d.lon);
+        setValue("latitude", d[0].lat || d.lat);
       });
     });
   };
@@ -326,14 +326,14 @@ export const RegisterLocationComponent = () => {
             <>
               <ButtonComponent
                 type="button"
-                text="Deletar Local"
+                text="Deletar"
                 preset="delete"
                 onClick={DeleteLocal}
                 variant="outlined"
               />
               <ButtonComponent
                 type="submit"
-                text="Editar Local"
+                text="Editar"
                 preset="edit"
                 variant="outlined"
               />
