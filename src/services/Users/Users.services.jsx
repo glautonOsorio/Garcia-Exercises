@@ -1,5 +1,5 @@
 import { axiosInstance } from "../../helper/axiosInstance";
-import { unformatCPF } from "../../helper/cpfInstance";
+import { unformatCPF } from "../../helper/formatInstance";
 
 export const GetUsers = async () => {
   try {

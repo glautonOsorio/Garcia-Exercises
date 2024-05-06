@@ -9,7 +9,7 @@ import { selectGender } from "../../../helper/selectInstance.jsx";
 import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
 import { ButtonComponent } from "../../Button/Button.component.jsx";
 import { AuthContext } from "../../../contexts/Auth.context.jsx";
-import { unformatCPF, formatCPF } from "../../../helper/cpfInstance.jsx";
+import { unformatCPF, formatCPF, formatDate } from "../../../helper/formatInstance.jsx";
 import {
   GetID,
   Update,
@@ -96,8 +96,9 @@ export const RegisterUser = () => {
       });
       return;
     }
-
-    const body = { ...data };
+    
+    
+    const body = { ...data,birthday: formatDate(data.birthday) };
     await Store(body);
     toast.success("Usuário cadastrado com sucesso", {
       position: "bottom-right",
