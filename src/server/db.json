@@ -2,1161 +2,81 @@
   "users": [
     {
       "id": 1,
-      "name": "Joaquim Fernando Henrique Moura",
+      "name": "Robert Garcia",
       "cpf": "60161407757",
-      "birthday": "10/01/2004",
+      "birthday": "25/12/1965",
       "gender": "Male",
-      "email": "joaquim_moura@hotmail.con",
-      "password": "yNgBTXIp0C",
-      "zipcode": "57046-545",
-      "address": "Rua Maria Isabel Maia Pio dos Santos",
-      "number": 213,
-      "neighborhood": "Serraria",
-      "city": "Maceió",
-      "state": "AL"
+      "email": "robert.garcia@yahoo.com",
+      "password": "Ryo'sBestFriend65&Yuri'sHusband",
+      "zipcode": "40140-060",
+      "address": "Rua Marquês de Caravelas",
+      "number": 321,
+      "neighborhood": "Barra",
+      "city": "Salvador",
+      "state": "BA"
     },
     {
-      "name": "Raimundo Sebastiano de Paula",
+      "name": "Terry Bogard",
       "cpf": "89060781023",
-      "birthday": "23/04/1945",
-      "gender": "male",
-      "email": "raimunda.sebastiana.depaula@aol.com",
-      "zipcode": "78150-538",
-      "address": "Avenida Júlio Domingos de Campos",
-      "number": 949,
-      "neighborhood": "Santa Isabel",
-      "city": "Várzea Grande",
-      "state": "MT",
+      "birthday": "1992-04-22",
+      "gender": "Male",
+      "email": "terry.bogard@gmail.com",
+      "password": "FatalFury91!",
+      "zipcode": "23010-120",
+      "address": "Rua Barata Ribeiro",
+      "number": 456,
+      "neighborhood": "Copacabana",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
       "id": 2
     },
     {
       "id": 3,
-      "name": "Sandra Brenda Adriana da Mata",
+      "name": "Kula Diamond",
       "cpf": "01241669708",
-      "birthday": "15/01/1978",
+      "birthday": "04/02/2002",
       "gender": "Female",
-      "email": "sandrabrendadamata@smbcontabil.com.br",
-      "password": "QdR2jGBrrQ",
-      "zipcode": "66825-483",
-      "address": "Alameda Renascer",
-      "number": 727,
-      "neighborhood": "Tapanã (Icoaraci)",
-      "city": "Belém",
-      "state": "PA"
+      "email": "kula.diamond@outlook.com",
+      "password": "IceQueen2002*",
+      "zipcode": "80010-020",
+      "address": "Rua XV de Novembro",
+      "number": 789,
+      "neighborhood": "Centro",
+      "city": "Curitiba",
+      "state": "PR"
     },
     {
       "id": 4,
-      "name": "Luan José da Costa",
+      "name": "Yagami Yori",
       "cpf": "28004766641",
-      "birthday": "26/01/1985",
+      "birthday": "13/07/1975",
       "gender": "Male",
-      "email": "luan-dacosta76@imobiliariamaciel.com.br",
-      "password": "bWU2gCIdSx",
-      "zipcode": "77420-450",
-      "address": "Rua 8-B",
-      "number": 690,
-      "neighborhood": "Parque Residencial Nova Fronteira",
-      "city": "Gurupi",
-      "state": "TO"
+      "email": "yagami.yori@hotmail.com",
+      "password": "KOF95&Iori",
+      "zipcode": "90010-200",
+      "address": "Rua dos Andradas",
+      "number": 456,
+      "neighborhood": "Centro Histórico",
+      "city": "Porto Alegre",
+      "state": "RS"
     },
     {
       "id": 5,
-      "name": "Sara Nair Rita Santos",
+      "name": "Blue Mary",
       "cpf": "01888333154",
-      "birthday": "21/01/1958",
+      "birthday": "10/03/1972",
       "gender": "Female",
-      "email": "sara_nair_santos@zf.com",
-      "password": "028Fkjx1lL",
-      "zipcode": "69903-062",
-      "address": "Rua 18 de Fevereiro",
-      "number": 554,
-      "neighborhood": "Conjunto Xavier Maia",
-      "city": "Rio Branco",
-      "state": "AC"
-    },
-    {
-      "name": "Banana Fernando Henrique Moura",
-      "cpf": "60161407757",
-      "birthday": "10/01/2004",
-      "gender": "Male",
-      "email": "joaquim_moura@hotmail.con",
-      "password": "yNgBTXIp0C",
-      "zipcode": "57046-545",
-      "address": "Rua Maria Isabel Maia Pio dos Santos",
-      "number": 213,
-      "neighborhood": "Serraria",
-      "city": "Maceió",
-      "state": "AL",
-      "id": 7
-    },
-    {
-      "name": "Testestesteast",
-      "cpf": "12345879884",
-      "gender": "female",
-      "email": "testestes@testes.com",
-      "birthday": "10/01/2004",
-      "password": "123456",
-      "zipcode": "38401466",
-      "address": "Rua Joaquim Clemente Oliveira",
-      "number": "123",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "id": 8
+      "email": "blue.mary@gmail.com",
+      "password": "DeadlyMoves72#",
+      "zipcode": "01310-100",
+      "address": "Avenida Paulista",
+      "number": 789,
+      "neighborhood": "Bela Vista",
+      "city": "São Paulo",
+      "state": "SP"
     }
   ],
   "locations": [
-    {
-      "user_id": 1,
-      "name": "sfasfffffffffffffffffffff",
-      "coordinates": {
-        "latitude": "-19.7532643",
-        "longitude": "-44.1487536"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": false
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": true
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": false
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 1
-    },
-    {
-      "user_id": 1,
-      "name": "sfasfffffffffffffffffffff",
-      "coordinates": {
-        "latitude": "-19.7532643",
-        "longitude": "-44.1487536"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": false
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": true
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": false
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 2
-    },
-    {
-      "user_id": 5,
-      "name": "fassssssssssss",
-      "coordinates": {
-        "latitude": "-19.7532643",
-        "longitude": "-44.1487536"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": true
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 4
-    },
-    {
-      "user_id": 5,
-      "name": "fassssssssssss",
-      "coordinates": {
-        "latitude": "-19.7532643",
-        "longitude": "-44.1487536"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": true
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 5
-    },
-    {
-      "user_id": 5,
-      "name": "TESTE uberlandia",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": false
-        },
-        {
-          "name": "Futebol",
-          "hasOption": true
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": false
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 6
-    },
-    {
-      "user_id": 5,
-      "name": "Teste3",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": true
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 7
-    },
-    {
-      "user_id": 5,
-      "name": "Teste3",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": true
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 8
-    },
-    {
-      "user_id": 5,
-      "name": "Teste3",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": true
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 9
-    },
-    {
-      "user_id": 5,
-      "name": "Teste3",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": true
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 10
-    },
-    {
-      "user_id": 5,
-      "name": "Teste3",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": true
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 11
-    },
-    {
-      "user_id": 5,
-      "name": "Teste3",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": true
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 12
-    },
-    {
-      "user_id": 5,
-      "name": "Teste3",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": true
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 13
-    },
-    {
-      "user_id": 5,
-      "name": "Teste3",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": true
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": false
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 14
-    },
-    {
-      "user_id": 5,
-      "name": "SFAAAAAAAAAAAAAA",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": false
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": true
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": false
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 15
-    },
-    {
-      "user_id": 5,
-      "name": "FFFFFFFFFFFFFFFFFFFFFFFFFF",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": false
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 16
-    },
-    {
-      "user_id": 5,
-      "name": "SAFFFFFFFFFFFFFFFFFFFF",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": false
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 17
-    },
-    {
-      "user_id": 5,
-      "name": "SAFFFFFFFFFFFFFFFFFFFF",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": false
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 18
-    },
-    {
-      "user_id": 5,
-      "name": "asffffffffffffffffffffffffffffffff",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": true
-        },
-        {
-          "name": "Futebol",
-          "hasOption": false
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": true
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": false
-        },
-        {
-          "name": "Outros",
-          "hasOption": true
-        }
-      ],
-      "id": 19
-    },
-    {
-      "user_id": 5,
-      "name": "hedefdhfdffh",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": false
-        },
-        {
-          "name": "Futebol",
-          "hasOption": true
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": false
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 21
-    },
-    {
-      "user_id": 5,
-      "name": "hedefdhfdffh",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": false
-        },
-        {
-          "name": "Futebol",
-          "hasOption": true
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": false
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 22
-    },
-    {
-      "user_id": 5,
-      "name": "hedefdhfdffh",
-      "zipcode": "38401-466",
-      "neighborhood": "Maravilha",
-      "city": "Uberlândia",
-      "state": "MG",
-      "coordinates": {
-        "latitude": "-18.8841466",
-        "longitude": "-48.2999995"
-      },
-      "sports_types": [
-        {
-          "name": "Musculação",
-          "hasOption": false
-        },
-        {
-          "name": "Futebol",
-          "hasOption": true
-        },
-        {
-          "name": "Natação",
-          "hasOption": false
-        },
-        {
-          "name": "Basquete",
-          "hasOption": false
-        },
-        {
-          "name": "Tênis",
-          "hasOption": true
-        },
-        {
-          "name": "Vôlei",
-          "hasOption": false
-        },
-        {
-          "name": "Corrida",
-          "hasOption": false
-        },
-        {
-          "name": "Yoga",
-          "hasOption": true
-        },
-        {
-          "name": "Outros",
-          "hasOption": false
-        }
-      ],
-      "id": 23
-    },
     {
       "user_id": 5,
       "name": "Beira-mar Norte",
@@ -1207,7 +127,7 @@
           "hasOption": true
         }
       ],
-      "id": 25
+      "id": 1
     },
     {
       "user_id": 5,
@@ -1259,7 +179,7 @@
           "hasOption": true
         }
       ],
-      "id": 26
+      "id": 2
     },
     {
       "user_id": 5,
@@ -1311,7 +231,579 @@
           "hasOption": true
         }
       ],
-      "id": 27
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "name": "Parque Guilherme Gripp Filho",
+      "description": "O Parque Guilherme Gripp Filho, localizado em São José, Santa Catarina, recebeu uma excelente avaliação de 4.6 de mais de 611 pessoas no Google Maps. É um ponto turístico popular na região. Além disso, está próximo de diver a apenas 7.6km de distância. Os horários de ônibus, pontos de embarque e outras atrações turísticas próximas podem ser consultados para facilitar a visita ao parque.",
+      "zipcode": "88107-387",
+      "neighborhood": "Forquilhas",
+      "city": "São José",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.5777785",
+        "longitude": "-48.6695186"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "name": "Parque Linear Ceniro Martins",
+      "description": "O Parque Linear Ceniro Martins, em São José, oferece uma área verde pública ao longo de várias ruas, proporcionando um refúgio urbano com trilhas, áreas de lazer e espaços para relaxamento. Ideal para quem busca contato com a natureza na cidade.",
+      "zipcode": "88104-400",
+      "neighborhood": "Fazenda Santo Antônio",
+      "city": "São José",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.6190791",
+        "longitude": "-48.6421083"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 5
+    },
+    {
+      "user_id": 1,
+      "name": "Parque do Araucária",
+      "description": "O Parque do Araucária, em São José, oferece uma área verde extensa com trilhas para caminhadas, espaços de lazer e preservação da natureza. Com uma localização central, é um refúgio urbano popular para atividades ao ar livre e relaxamento. Suas características incluem uma grande diversidade de flora e fauna, proporcionando uma experiência natural em meio à cidade.",
+      "zipcode": "88106-100",
+      "neighborhood": "Picadas do Sul",
+      "city": "São José",
+      "state": "SC",
+      "coordinates": {
+        "latitude": " -27.610683",
+        "longitude": " -48.644969"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 6
+    },
+    {
+      "user_id": 2,
+      "name": "Pista de Caminhada na Lagoa da Conceição",
+      "description": "A pista de caminhada na Lagoa da Conceição oferece uma experiência tranquila e revigorante em Florianópolis. Com uma extensa trilha ao redor da lagoa, é um local popular para atividades físicas, como corrida e caminhada. Rodeada pela natureza exuberante da região, proporciona uma vista deslumbrante e uma atmosfera relaxante para quem busca se exercitar ao ar livre.",
+      "zipcode": "88062-105",
+      "neighborhood": "Lagoa da Conceição",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.6005601",
+        "longitude": "-48.4718201"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 7
+    },
+    {
+      "user_id": 2,
+      "name": "Trilha do Morro da Cruz",
+      "description": "A Trilha do Morro da Cruz, em Florianópolis, oferece uma experiência de trekking desafiadora e recompensadora. Com uma subida íngreme até o topo, proporciona vistas panorâmicas incríveis da região. É uma opção popular para os amantes da natureza e dos esportes ao ar livre, oferecendo uma oportunidade única de explorar a beleza natural da ilha.",
+      "zipcode": "88058-600",
+      "neighborhood": "Ingleses do Rio Vermelho",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.4371821",
+        "longitude": "-48.3906799"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 8
+    },
+    {
+      "user_id": 2,
+      "name": "Praia de Jurerê",
+      "description": "Praia de Jurerê, em Florianópolis, oferece uma atmosfera sofisticada e relaxante. Com areias douradas, águas calmas e uma ampla faixa de areia, é ideal para banhos de sol e atividades aquáticas. A região também conta com diversos beach clubs e restaurantes à beira-mar, proporcionando uma experiência luxuosa à beira da praia.",
+      "zipcode": "88053-505",
+      "neighborhood": "Jurerê",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.4419836",
+        "longitude": "-48.4941144"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 9
+    },
+    {
+      "user_id": 3,
+      "name": "Trilha do Morro do Macaco",
+      "description": "A Trilha do Morro do Macaco, no sul da Ilha de Florianópolis, oferece uma jornada desafiadora e recompensadora por entre a exuberante Mata Atlântica. Com vistas panorâmicas deslumbrantes e uma atmosfera serena, esta trilha proporciona uma experiência única de conexão com a natureza, ideal para os amantes do trekking e da aventura.",
+      "zipcode": "88066-150",
+      "neighborhood": "Campeche",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.7053551",
+        "longitude": "-48.4997438"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 10
+    },
+    {
+      "user_id": 3,
+      "name": "Praia do Campeche",
+      "description": "A Praia do Campeche, em Florianópolis, é famosa por suas águas claras e extensa faixa de areia. É um paraíso para surfistas e banhistas, oferecendo uma atmosfera relaxante e cenários deslumbrantes. Com fácil acesso e infraestrutura turística, é um destino popular para quem busca diversão à beira-mar.",
+      "zipcode": "88063-400",
+      "neighborhood": "Campeche",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.6822485",
+        "longitude": "-48.490661"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 11
+    },
+    {
+      "user_id": 3,
+      "name": "Praia da Armação",
+      "description": "A Praia da Armação, em Florianópolis, encanta com suas águas calmas e ambiente tranquilo. Com sua vila de pescadores pitoresca, é um local perfeito para relaxar e apreciar o estilo de vida litorâneo. Suas águas são ideais para natação e há opções de restaurantes que oferecem frutos do mar frescos.",
+      "zipcode": "88066-220",
+      "neighborhood": "Morro das Pedras",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.7072917",
+        "longitude": "-48.503206"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 12
+    },
+    {
+      "user_id": 4,
+      "name": "Trilhas na Mata Atlântica",
+      "description": "As trilhas na Mata Atlântica em Biguaçu oferecem uma experiência imersiva na natureza, com paisagens deslumbrantes e oportunidades para caminhadas revigorantes em um ambiente preservado.",
+      "zipcode": "88160-001",
+      "neighborhood": "Prado de Baixo",
+      "city": "Biguaçu",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.4851388",
+        "longitude": "-48.6476543"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 13
+    },
+    {
+      "user_id": 4,
+      "name": "Praia de São Miguel",
+      "description": "A Praia de São Miguel em Biguaçu é um refúgio tranquilo para atividades físicas à beira-mar, como corrida, caminhada e esportes aquáticos, oferecendo também belas paisagens naturais para relaxar e desfrutar.",
+      "zipcode": "88160-002",
+      "neighborhood": "Prado de Baixo",
+      "city": "Biguaçu",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.4852597",
+        "longitude": "-48.6468305"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 14
     }
   ]
 }

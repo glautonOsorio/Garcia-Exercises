@@ -9,6 +9,7 @@ export const FooterContainer = styled.div`
   padding: 1rem;
   width: 100%;
   height: 10%;
+  margin-top: auto;
   background: ${({ $theme }) => $theme.primary};
 
   @media (max-width: 1024px) {
@@ -27,6 +28,7 @@ export const FooterTextContent = styled.div`
     gap: 0.5rem;
   }
 `;
+
 export const FooterColumm = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,6 +39,7 @@ export const FooterColumm = styled.div`
     align-items: center;
   }
 `;
+
 export const FooterSpan = styled.span`
   position: relative;
   top: 0.8rem;
@@ -68,6 +71,7 @@ export const FooterTitle = styled.h1`
     font-size: 1.2rem;
   }
 `;
+
 export const StyledLink = styled(NavLink)`
   display: flex;
   color: ${({ $theme }) => $theme.text};

@@ -10,10 +10,22 @@ export const NavBarContainer = styled.div`
   width: 100%;
   height: 1.2rem;
   background: ${({ $theme }) => $theme.primary};
+  text-align: center;
 
   @media (max-width: 1024px) {
-    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1rem;
     padding: 2rem 1rem;
+    height: 4rem;
+    text-align: center;
+
+    overflow-wrap: auto;
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 `;
 
@@ -33,5 +45,6 @@ export const StyledLink = styled(NavLink)`
   @media (max-width: 1024px) {
     padding: 0.8rem 1rem;
     gap: 1rem;
+    font-size: 0.8rem;
   }
 `;

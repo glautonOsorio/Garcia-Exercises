@@ -21,6 +21,7 @@ export const LoginForm = styled.form`
   text-align: center;
   border-radius: 1rem;
   background: ${({ $theme }) => $theme.primary};
+  z-index: 1;
 
   @media (max-width: 1024px) {
     width: 60%;
@@ -29,12 +30,12 @@ export const LoginForm = styled.form`
 
 export const FormGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr); // 3 columns
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
   gap: 1rem;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr); // 3 columns
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -114,14 +115,13 @@ export const ButtonWrapper = styled.div`
   padding: 1rem;
   justify-content: space-around;
 
-  @media (max-width: 1024px) {
-    flex-direction: column;
+  @media (max-width: 768px) {
     gap: 1rem;
   }
 `;
 
 export const Search = styled(SearchOutlinedIcon)`
-  position: absolute; /* Position the error text */
+  position: absolute;
   bottom: 0.2rem;
   left: 0.2rem;
   z-index: 1000;

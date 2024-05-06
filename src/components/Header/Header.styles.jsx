@@ -14,7 +14,6 @@ export const HeaderContainer = styled.div`
   background: ${({ $theme }) => $theme.primary};
 
   @media (max-width: 1024px) {
-    height: auto;
     padding: 2rem 1rem;
   }
 `;
@@ -29,6 +28,7 @@ export const HeaderTextContent = styled.div`
     gap: 0.5rem;
   }
 `;
+
 export const HeaderColumm = styled.div`
   display: flex;
   flex-direction: column;
@@ -39,6 +39,7 @@ export const HeaderColumm = styled.div`
     align-items: center;
   }
 `;
+
 export const HeaderSpan = styled.span`
   font-size: 1rem;
   font-weight: 400;
@@ -94,6 +95,7 @@ export const LoggedIconMan = styled(PersonIcon)`
   color: ${({ $theme }) => $theme.text} !important;
   background-color: ${({ $theme }) => $theme.secondary} !important;
 `;
+
 export const LoggedIconWoman = styled(Person3Icon)`
   font-size: 3.5rem !important;
   color: ${({ $theme }) => $theme.text} !important;

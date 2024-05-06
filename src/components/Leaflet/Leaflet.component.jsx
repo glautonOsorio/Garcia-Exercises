@@ -31,9 +31,9 @@ export const MapComponent = () => {
 
   return (
     <Styled.StyledMapContainer
-      center={[-9.568194, -35.749274]}
-      zoom={13}
-      maxZoom={18}
+      center={[-27.5935, -48.55854]}
+      zoom={12}
+      maxZoom={20}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <MarkerClusterGroup

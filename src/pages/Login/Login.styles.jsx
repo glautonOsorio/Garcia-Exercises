@@ -10,7 +10,7 @@ export const LoginPage = styled.div`
 
 export const BackgroundImage = styled.div`
   position: absolute;
-  top: 29rem;
+  top: 22rem;
   right: 1rem;
   overflow: hidden;
   z-index: 0;
