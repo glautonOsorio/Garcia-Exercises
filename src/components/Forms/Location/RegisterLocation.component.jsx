@@ -1,13 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { ThemeContext } from "../../../contexts/Theme.context.jsx";
-import * as Styled from "../Form.styles.jsx";
+import "react-toastify/dist/ReactToastify.css";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+
 import { InputComponent } from "../../Input/Input.component.jsx";
-import { AuthContext } from "../../../contexts/Auth.context.jsx";
 import { ButtonComponent } from "../../Button/Button.component.jsx";
 import { checkBoxOptions } from "../../../helper/selectInstance.jsx";
-import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
-import { GetLongLati } from "../../../services/Nominatim_API/Nominatim.service.jsx";
+
 import {
   Delete,
   Update,
@@ -15,10 +15,14 @@ import {
   GetLocations,
   Store,
 } from "../../../services/Locations/Locations.service.jsx";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
+import { GetLongLati } from "../../../services/Nominatim_API/Nominatim.service.jsx";
+
+import { AuthContext } from "../../../contexts/Auth.context.jsx";
+import { ThemeContext } from "../../../contexts/Theme.context.jsx";
 import { LocationContext } from "../../../contexts/Locations.context.jsx";
+
+import * as Styled from "../Form.styles.jsx";
 
 export const RegisterLocationComponent = () => {
   const { theme } = useContext(ThemeContext);

@@ -1,14 +1,17 @@
 import { useContext } from "react";
-import * as Styled from "./NavBar.styles";
-import { ThemeContext } from "../../contexts/Theme.context.jsx";
-import { AuthContext } from "../../contexts/Auth.context.jsx";
 
-import LogoutIcon from "@mui/icons-material/Logout";
-import SettingsIcon from "@mui/icons-material/Settings";
+import { AuthContext } from "../../contexts/Auth.context.jsx";
+import { ThemeContext } from "../../contexts/Theme.context.jsx";
+
 import AddIcon from "@mui/icons-material/Add";
-import ListIcon from "@mui/icons-material/List";
-import ListAltIcon from "@mui/icons-material/ListAlt";
 import HomeIcon from "@mui/icons-material/Home";
+import ListIcon from "@mui/icons-material/List";
+import LogoutIcon from "@mui/icons-material/Logout";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import SettingsIcon from "@mui/icons-material/Settings";
+
+import * as Styled from "./NavBar.styles";
+
 export const NavBarComponent = () => {
   const { theme } = useContext(ThemeContext);
   const { user, logout } = useContext(AuthContext);

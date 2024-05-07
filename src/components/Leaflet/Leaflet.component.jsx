@@ -1,15 +1,15 @@
-import * as Styled from "./Leaflet.styles";
-import "leaflet/dist/leaflet.css";
+import { useContext } from "react";
+
 import "./Map.css";
-
+import "leaflet/dist/leaflet.css";
+import { Icon, divIcon, point } from "leaflet";
 import { TileLayer, Marker } from "react-leaflet";
-
 import MarkerClusterGroup from "react-leaflet-cluster";
 
-import { Icon, divIcon, point } from "leaflet";
-import { useContext } from "react";
-import { LocationContext } from "../../contexts/Locations.context";
 import { ThemeContext } from "../../contexts/Theme.context";
+import { LocationContext } from "../../contexts/Locations.context";
+
+import * as Styled from "./Leaflet.styles";
 
 export const MapComponent = () => {
   const { locations } = useContext(LocationContext);

@@ -1,11 +1,14 @@
-import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { ThemeContext } from "../../../contexts/Theme.context.jsx";
-import * as Styled from "../Form.styles.jsx";
+import { useContext } from "react";
+
 import { InputComponent } from "../../Input/Input.component.jsx";
-import { LoginContext } from "../../../contexts/Login.context.jsx";
 import { ButtonComponent } from "../../Button/Button.component.jsx";
+
+import { LoginContext } from "../../../contexts/Login.context.jsx";
 import { AuthContext } from "../../../contexts/Auth.context.jsx";
+import { ThemeContext } from "../../../contexts/Theme.context.jsx";
+
+import * as Styled from "../Form.styles.jsx";
 
 export const LoginComponent = () => {
   const { theme } = useContext(ThemeContext);

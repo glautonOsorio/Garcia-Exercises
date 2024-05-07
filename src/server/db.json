@@ -74,21 +74,6 @@
       "neighborhood": "Bela Vista",
       "city": "São Paulo",
       "state": "SP"
-    },
-    {
-      "name": "Thiago",
-      "cpf": "12345678994",
-      "birthday": "1999-11-21",
-      "gender": "Male",
-      "email": "teste@teste.com",
-      "password": "FatalFury91!",
-      "zipcode": "69905-420",
-      "address": "Rua Lua Nova",
-      "number": "109",
-      "neighborhood": "Cidade Nova",
-      "city": "Rio Branco",
-      "state": "AC",
-      "id": 6
     }
   ],
   "locations": [

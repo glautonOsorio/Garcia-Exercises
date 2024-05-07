@@ -1,10 +1,10 @@
 import { createContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
 import {
   getLocalStorage,
   setLocalStorage,
 } from "../helper/LocalStorageInstance";
-import PropTypes from "prop-types";
-
 import { darkTheme, lightTheme } from "../Themes";
 
 export const ThemeContext = createContext();
@@ -23,7 +23,6 @@ export const ThemeProvider = ({ children }) => {
     const newTheme = theme === lightTheme ? darkTheme : lightTheme;
     setLocalStorage("theme", newTheme);
     setTheme(newTheme);
-    
   };
 
   return (

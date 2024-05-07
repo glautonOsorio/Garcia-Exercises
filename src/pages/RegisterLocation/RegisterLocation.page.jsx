@@ -1,4 +1,5 @@
 import { RegisterLocationComponent } from "../../components/Forms/Location/RegisterLocation.component";
+
 import * as Styled from "../Pages.styles";
 
 export const RegisterLocationPage = () => {

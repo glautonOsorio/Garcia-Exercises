@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
-import * as Styled from "./Select.styles";
 import { useContext } from "react";
+
 import { ThemeContext } from "../../contexts/Theme.context";
+
+import * as Styled from "./Select.styles";
 
 export const SelectComponent = ({
   register,

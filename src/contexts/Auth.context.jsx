@@ -1,13 +1,14 @@
 import { createContext, useEffect, useState } from "react";
-import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 import PropTypes from "prop-types";
+
+import { GetEmail, GetUsers } from "../services/Users/Users.services";
+
 import {
   deleteLocalStorage,
   getLocalStorage,
   setLocalStorage,
 } from "../helper/LocalStorageInstance";
-import { GetEmail, GetUsers } from "../services/Users/Users.services";
 
 export const AuthContext = createContext();
 

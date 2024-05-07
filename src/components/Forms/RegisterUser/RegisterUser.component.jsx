@@ -1,19 +1,20 @@
-import { useContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { LoginContext } from "../../../contexts/Login.context.jsx";
-import { ThemeContext } from "../../../contexts/Theme.context.jsx";
-import * as Styled from "../Form.styles.jsx";
+import { useNavigate, useParams } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+
 import { InputComponent } from "../../Input/Input.component.jsx";
 import { SelectComponent } from "../../Select/Select.component.jsx";
-import { selectGender } from "../../../helper/selectInstance.jsx";
-import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
 import { ButtonComponent } from "../../Button/Button.component.jsx";
-import { AuthContext } from "../../../contexts/Auth.context.jsx";
+
+import { selectGender } from "../../../helper/selectInstance.jsx";
+import { deleteLocalStorage } from "../../../helper/LocalStorageInstance.jsx";
 import {
   unformatCPF,
   formatCPF,
   formatDate,
 } from "../../../helper/formatInstance.jsx";
+
 import {
   GetID,
   Update,
@@ -21,12 +22,15 @@ import {
   Delete,
   GetUsers,
 } from "../../../services/Users/Users.services.jsx";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useNavigate, useParams } from "react-router-dom";
-import { LocationContext } from "../../../contexts/Locations.context.jsx";
-import { deleteLocalStorage } from "../../../helper/LocalStorageInstance.jsx";
+import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
 import { GetByUserId } from "../../../services/Locations/Locations.service.jsx";
+
+import { AuthContext } from "../../../contexts/Auth.context.jsx";
+import { LoginContext } from "../../../contexts/Login.context.jsx";
+import { LocationContext } from "../../../contexts/Locations.context.jsx";
+import { ThemeContext } from "../../../contexts/Theme.context.jsx";
+
+import * as Styled from "../Form.styles.jsx";
 
 export const RegisterUser = () => {
   const { theme } = useContext(ThemeContext);

@@ -1,13 +1,16 @@
 import { useContext } from "react";
-import * as Styled from "./Header.styles";
-import { LoginContext } from "../../contexts/Login.context";
 import { useNavigate } from "react-router-dom";
+
+import { LoginContext } from "../../contexts/Login.context";
 import { AuthContext } from "../../contexts/Auth.context.jsx";
 import { ThemeContext } from "../../contexts/Theme.context.jsx";
+
 import LoginIcon from "@mui/icons-material/Login";
 import HikingIcon from "@mui/icons-material/Hiking";
-import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import ContrastIcon from "@mui/icons-material/Contrast";
+import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
+
+import * as Styled from "./Header.styles";
 
 export function HeaderComponent() {
   const { showRegister } = useContext(LoginContext);
