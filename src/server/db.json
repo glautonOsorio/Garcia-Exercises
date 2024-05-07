@@ -1,0 +1,809 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Robert Garcia",
+      "cpf": "60161407757",
+      "birthday": "1965-12-25",
+      "gender": "Male",
+      "email": "robert.garcia@yahoo.com",
+      "password": "Ryo'sBestFriend65&Yuri'sHusband",
+      "zipcode": "40140-060",
+      "address": "Rua Marquês de Caravelas",
+      "number": 321,
+      "neighborhood": "Barra",
+      "city": "Salvador",
+      "state": "BA"
+    },
+    {
+      "name": "Terry Bogard",
+      "cpf": "89060781023",
+      "birthday": "1992-04-22",
+      "gender": "Male",
+      "email": "terry.bogard@gmail.com",
+      "password": "FatalFury91!",
+      "zipcode": "23010-120",
+      "address": "Rua Barata Ribeiro",
+      "number": 456,
+      "neighborhood": "Copacabana",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Kula Diamond",
+      "cpf": "01241669708",
+      "birthday": "2002-02-04",
+      "gender": "Female",
+      "email": "kula.diamond@outlook.com",
+      "password": "IceQueen2002*",
+      "zipcode": "80010-020",
+      "address": "Rua XV de Novembro",
+      "number": 789,
+      "neighborhood": "Centro",
+      "city": "Curitiba",
+      "state": "PR"
+    },
+    {
+      "id": 4,
+      "name": "Yagami Yori",
+      "cpf": "28004766641",
+      "birthday": "1975-07-13",
+      "gender": "Male",
+      "email": "yagami.yori@hotmail.com",
+      "password": "KOF95&Iori",
+      "zipcode": "90010-200",
+      "address": "Rua dos Andradas",
+      "number": 456,
+      "neighborhood": "Centro Histórico",
+      "city": "Porto Alegre",
+      "state": "RS"
+    },
+    {
+      "id": 5,
+      "name": "Blue Mary",
+      "cpf": "01888333154",
+      "birthday": "1972-03-10",
+      "gender": "Female",
+      "email": "blue.mary@gmail.com",
+      "password": "DeadlyMoves72#",
+      "zipcode": "01310-100",
+      "address": "Avenida Paulista",
+      "number": 789,
+      "neighborhood": "Bela Vista",
+      "city": "São Paulo",
+      "state": "SP"
+    }
+  ],
+  "locations": [
+    {
+      "user_id": 5,
+      "name": "Beira-mar Norte",
+      "description": "A Beira-Mar Norte oferece uma vista panorâmica da cidade e é ideal para caminhadas, corridas, ciclismo, remo e stand up paddle, com um calçadão espaçoso, ciclovia e águas calmas.",
+      "zipcode": "88015-702",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.5809381",
+        "longitude": "-48.5441383"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 1
+    },
+    {
+      "user_id": 5,
+      "name": " Lagoa da Conceição",
+      "description": "Este é outro local muito procurado para se exercitar em Florianópolis. Nos dias de bastante vento, a lagoa fica colorida devido a quantidade de praticantes de kitesurf. Quando a água está mais calma, as pranchas de stand up paddle é que se destacam.",
+      "zipcode": "88048-560",
+      "neighborhood": "Lagoa da Conceição",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.636809",
+        "longitude": "-48.4707556"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 2
+    },
+    {
+      "user_id": 5,
+      "name": " Parque de Coqueiros",
+      "description": "O Parque de Coqueiros é outro local ótimo para se exercitar em Florianópolis. Localizado na parte continental da cidade, ela tem espaço bem delimitado para caminhar ou correr e outro para bikes, roller e skates. E o melhor: respirando muito ar puro!",
+      "zipcode": "88080-010",
+      "neighborhood": "Coqueiros",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.5970132",
+        "longitude": "-48.570006"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "name": "Parque Guilherme Gripp Filho",
+      "description": "O Parque Guilherme Gripp Filho, localizado em São José, Santa Catarina, recebeu uma excelente avaliação de 4.6 de mais de 611 pessoas no Google Maps. É um ponto turístico popular na região. Além disso, está próximo de diver a apenas 7.6km de distância. Os horários de ônibus, pontos de embarque e outras atrações turísticas próximas podem ser consultados para facilitar a visita ao parque.",
+      "zipcode": "88107-387",
+      "neighborhood": "Forquilhas",
+      "city": "São José",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.5777785",
+        "longitude": "-48.6695186"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "name": "Parque Linear Ceniro Martins",
+      "description": "O Parque Linear Ceniro Martins, em São José, oferece uma área verde pública ao longo de várias ruas, proporcionando um refúgio urbano com trilhas, áreas de lazer e espaços para relaxamento. Ideal para quem busca contato com a natureza na cidade.",
+      "zipcode": "88104-400",
+      "neighborhood": "Fazenda Santo Antônio",
+      "city": "São José",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.6190791",
+        "longitude": "-48.6421083"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": true
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 5
+    },
+    {
+      "user_id": 1,
+      "name": "Parque do Araucária",
+      "description": "O Parque do Araucária, em São José, oferece uma área verde extensa com trilhas para caminhadas, espaços de lazer e preservação da natureza. Com uma localização central, é um refúgio urbano popular para atividades ao ar livre e relaxamento. Suas características incluem uma grande diversidade de flora e fauna, proporcionando uma experiência natural em meio à cidade.",
+      "zipcode": "88106-100",
+      "neighborhood": "Picadas do Sul",
+      "city": "São José",
+      "state": "SC",
+      "coordinates": {
+        "latitude": " -27.610683",
+        "longitude": " -48.644969"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 6
+    },
+    {
+      "user_id": 2,
+      "name": "Pista de Caminhada na Lagoa da Conceição",
+      "description": "A pista de caminhada na Lagoa da Conceição oferece uma experiência tranquila e revigorante em Florianópolis. Com uma extensa trilha ao redor da lagoa, é um local popular para atividades físicas, como corrida e caminhada. Rodeada pela natureza exuberante da região, proporciona uma vista deslumbrante e uma atmosfera relaxante para quem busca se exercitar ao ar livre.",
+      "zipcode": "88062-105",
+      "neighborhood": "Lagoa da Conceição",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.6005601",
+        "longitude": "-48.4718201"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 7
+    },
+    {
+      "user_id": 2,
+      "name": "Trilha do Morro da Cruz",
+      "description": "A Trilha do Morro da Cruz, em Florianópolis, oferece uma experiência de trekking desafiadora e recompensadora. Com uma subida íngreme até o topo, proporciona vistas panorâmicas incríveis da região. É uma opção popular para os amantes da natureza e dos esportes ao ar livre, oferecendo uma oportunidade única de explorar a beleza natural da ilha.",
+      "zipcode": "88058-600",
+      "neighborhood": "Ingleses do Rio Vermelho",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.4371821",
+        "longitude": "-48.3906799"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 8
+    },
+    {
+      "user_id": 2,
+      "name": "Praia de Jurerê",
+      "description": "Praia de Jurerê, em Florianópolis, oferece uma atmosfera sofisticada e relaxante. Com areias douradas, águas calmas e uma ampla faixa de areia, é ideal para banhos de sol e atividades aquáticas. A região também conta com diversos beach clubs e restaurantes à beira-mar, proporcionando uma experiência luxuosa à beira da praia.",
+      "zipcode": "88053-505",
+      "neighborhood": "Jurerê",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.4419836",
+        "longitude": "-48.4941144"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 9
+    },
+    {
+      "user_id": 3,
+      "name": "Trilha do Morro do Macaco",
+      "description": "A Trilha do Morro do Macaco, no sul da Ilha de Florianópolis, oferece uma jornada desafiadora e recompensadora por entre a exuberante Mata Atlântica. Com vistas panorâmicas deslumbrantes e uma atmosfera serena, esta trilha proporciona uma experiência única de conexão com a natureza, ideal para os amantes do trekking e da aventura.",
+      "zipcode": "88066-150",
+      "neighborhood": "Campeche",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.7053551",
+        "longitude": "-48.4997438"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 10
+    },
+    {
+      "user_id": 3,
+      "name": "Praia do Campeche",
+      "description": "A Praia do Campeche, em Florianópolis, é famosa por suas águas claras e extensa faixa de areia. É um paraíso para surfistas e banhistas, oferecendo uma atmosfera relaxante e cenários deslumbrantes. Com fácil acesso e infraestrutura turística, é um destino popular para quem busca diversão à beira-mar.",
+      "zipcode": "88063-400",
+      "neighborhood": "Campeche",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.6822485",
+        "longitude": "-48.490661"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": true
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": true
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 11
+    },
+    {
+      "user_id": 3,
+      "name": "Praia da Armação",
+      "description": "A Praia da Armação, em Florianópolis, encanta com suas águas calmas e ambiente tranquilo. Com sua vila de pescadores pitoresca, é um local perfeito para relaxar e apreciar o estilo de vida litorâneo. Suas águas são ideais para natação e há opções de restaurantes que oferecem frutos do mar frescos.",
+      "zipcode": "88066-220",
+      "neighborhood": "Morro das Pedras",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.7072917",
+        "longitude": "-48.503206"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": true
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": true
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 12
+    },
+    {
+      "user_id": 4,
+      "name": "Trilhas na Mata Atlântica",
+      "description": "As trilhas na Mata Atlântica em Biguaçu oferecem uma experiência imersiva na natureza, com paisagens deslumbrantes e oportunidades para caminhadas revigorantes em um ambiente preservado.",
+      "zipcode": "88160-001",
+      "neighborhood": "Prado de Baixo",
+      "city": "Biguaçu",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.4851388",
+        "longitude": "-48.6476543"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": true
+        },
+        {
+          "name": "Outros",
+          "hasOption": true
+        }
+      ],
+      "id": 13
+    },
+    {
+      "user_id": 4,
+      "name": "Praia de São Miguel",
+      "description": "A Praia de São Miguel em Biguaçu é um refúgio tranquilo para atividades físicas à beira-mar, como corrida, caminhada e esportes aquáticos, oferecendo também belas paisagens naturais para relaxar e desfrutar.",
+      "zipcode": "88160-002",
+      "neighborhood": "Prado de Baixo",
+      "city": "Biguaçu",
+      "state": "SC",
+      "coordinates": {
+        "latitude": "-27.4852597",
+        "longitude": "-48.6468305"
+      },
+      "sports_types": [
+        {
+          "name": "Musculação",
+          "hasOption": false
+        },
+        {
+          "name": "Futebol",
+          "hasOption": false
+        },
+        {
+          "name": "Natação",
+          "hasOption": false
+        },
+        {
+          "name": "Basquete",
+          "hasOption": false
+        },
+        {
+          "name": "Tênis",
+          "hasOption": false
+        },
+        {
+          "name": "Vôlei",
+          "hasOption": false
+        },
+        {
+          "name": "Corrida",
+          "hasOption": false
+        },
+        {
+          "name": "Yoga",
+          "hasOption": false
+        },
+        {
+          "name": "Outros",
+          "hasOption": false
+        }
+      ],
+      "id": 14
+    }
+  ]
+}
