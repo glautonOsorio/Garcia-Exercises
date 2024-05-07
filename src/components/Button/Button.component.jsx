@@ -1,5 +1,7 @@
 import { useContext } from "react";
+
 import { ThemeContext } from "../../contexts/Theme.context";
+
 import * as Styled from "./Button.styles";
 
 export const ButtonComponent = ({
@@ -13,7 +15,7 @@ export const ButtonComponent = ({
   const { theme } = useContext(ThemeContext);
 
   return (
-    <Styled.ButtonGroup  $theme={theme} >
+    <Styled.ButtonGroup $theme={theme}>
       <Styled.NewButton
         variant={variant}
         type={type}

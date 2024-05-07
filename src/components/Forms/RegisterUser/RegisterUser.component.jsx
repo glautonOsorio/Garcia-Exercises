@@ -1,15 +1,20 @@
-import { useContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { LoginContext } from "../../../contexts/Login.context.jsx";
-import { ThemeContext } from "../../../contexts/Theme.context.jsx";
-import * as Styled from "../Form.styles.jsx";
+import { useNavigate, useParams } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+
 import { InputComponent } from "../../Input/Input.component.jsx";
 import { SelectComponent } from "../../Select/Select.component.jsx";
-import { selectGender } from "../../../helper/selectInstance.jsx";
-import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
 import { ButtonComponent } from "../../Button/Button.component.jsx";
-import { AuthContext } from "../../../contexts/Auth.context.jsx";
-import { unformatCPF, formatCPF, formatDate } from "../../../helper/formatInstance.jsx";
+
+import { selectGender } from "../../../helper/selectInstance.jsx";
+import { deleteLocalStorage } from "../../../helper/LocalStorageInstance.jsx";
+import {
+  unformatCPF,
+  formatCPF,
+  formatDate,
+} from "../../../helper/formatInstance.jsx";
+
 import {
   GetID,
   Update,
@@ -17,14 +22,22 @@ import {
   Delete,
   GetUsers,
 } from "../../../services/Users/Users.services.jsx";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { ViaCEP } from "../../../services/ViaCep/ViaCep.services.jsx";
+import { GetByUserId } from "../../../services/Locations/Locations.service.jsx";
+
+import { AuthContext } from "../../../contexts/Auth.context.jsx";
+import { LoginContext } from "../../../contexts/Login.context.jsx";
+import { LocationContext } from "../../../contexts/Locations.context.jsx";
+import { ThemeContext } from "../../../contexts/Theme.context.jsx";
+
+import * as Styled from "../Form.styles.jsx";
 
 export const RegisterUser = () => {
   const { theme } = useContext(ThemeContext);
   const { showLogin } = useContext(LoginContext);
-  const { users, user, setUsers } = useContext(AuthContext);
+  const { users, user, setUsers, setUser, setIsLogged } =
+    useContext(AuthContext);
+  const [userLocations, setUserLocations] = useState();
   const [pass, setPass] = useState();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -96,10 +109,12 @@ export const RegisterUser = () => {
       });
       return;
     }
-    
-    
-    const body = { ...data,birthday: formatDate(data.birthday) };
+
+    const body = { ...data, birthday: formatDate(data.birthday) };
     await Store(body);
+    await GetUsers().then((res) => {
+      setUsers(res);
+    });
     toast.success("Usuário cadastrado com sucesso", {
       position: "bottom-right",
       theme: "colored",
@@ -153,8 +168,23 @@ export const RegisterUser = () => {
 
   const DeleteUser = async () => {
     try {
+      const local = await GetByUserId(user.id);
+      if (local[0] != null) {
+        toast.error(`O usuário ainda tem locais cadastrados`, {
+          position: "top-center",
+          theme: "colored",
+          autoClose: 2000,
+        });
+        return;
+      }
+
       await Delete(id);
-      toast.success("Usuario deletado com sucesso", {
+      setIsLogged(false);
+      setUser(null);
+      deleteLocalStorage("logged");
+      const res = await GetUsers();
+      setUsers(res);
+      toast.success("Usuário deletado com sucesso", {
         position: "bottom-right",
         theme: "colored",
         autoClose: 2000,

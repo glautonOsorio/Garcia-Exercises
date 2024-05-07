@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import { useContext, useState } from "react";
 
-import * as Styled from "./Input.styles";
+import { ThemeContext } from "../../contexts/Theme.context";
 
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { ThemeContext } from "../../contexts/Theme.context";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+
+import * as Styled from "./Input.styles";
 
 export const InputComponent = ({
   label,

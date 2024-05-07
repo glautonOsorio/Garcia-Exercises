@@ -1,7 +1,9 @@
-import * as Styled from "../Pages.styles";
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { ThemeContext } from "../../contexts/Theme.context";
+
+import * as Styled from "../Pages.styles";
 
 export const ErrorPage = () => {
   const { theme } = useContext(ThemeContext);

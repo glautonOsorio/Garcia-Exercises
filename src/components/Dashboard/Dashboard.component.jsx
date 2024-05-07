@@ -1,11 +1,15 @@
-import { AuthContext } from "../../contexts/Auth.context.jsx";
-import { LocationContext } from "../../contexts/Locations.context.jsx";
 import { useContext, useEffect, useState } from "react";
+
 import { GetByUserId } from "../../services/Locations/Locations.service.jsx";
-import { getLocalStorage } from "../../helper/LocalStorageInstance.jsx";
 import { GetEmail } from "../../services/Users/Users.services.jsx";
-import * as Styled from "./Dashboard.styles.jsx";
+
+import { getLocalStorage } from "../../helper/LocalStorageInstance.jsx";
+
+import { AuthContext } from "../../contexts/Auth.context.jsx";
 import { ThemeContext } from "../../contexts/Theme.context.jsx";
+import { LocationContext } from "../../contexts/Locations.context.jsx";
+
+import * as Styled from "./Dashboard.styles.jsx";
 
 export const DashboardComponent = () => {
   const { users, isLogged } = useContext(AuthContext);

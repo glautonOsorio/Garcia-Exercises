@@ -1,10 +1,12 @@
-import * as Styled from "./Footer.styles";
-import { ThemeContext } from "../../contexts/Theme.context.jsx";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { ThemeContext } from "../../contexts/Theme.context.jsx";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
+import * as Styled from "./Footer.styles";
 
 export function FooterComponent() {
   const { theme } = useContext(ThemeContext);

@@ -1,11 +1,14 @@
-import * as Styled from "../Pages.styles";
-import { LocationContext } from "../../contexts/Locations.context";
 import { useContext, useEffect, useState } from "react";
-import { CardsComponent } from "../../components/Card/Card.component";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+
+import { LocationContext } from "../../contexts/Locations.context";
+import { CardsComponent } from "../../components/Card/Card.component";
+
 import { GetByUserId } from "../../services/Locations/Locations.service";
 import { AuthContext } from "../../contexts/Auth.context.jsx";
-import { toast } from "react-toastify";
+
+import * as Styled from "../Pages.styles";
 
 export const LocationsPage = () => {
   const { locations } = useContext(LocationContext);

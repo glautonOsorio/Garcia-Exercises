@@ -1,17 +1,25 @@
-import * as Styled from "./Card.styles";
-import "leaflet/dist/leaflet.css";
-import { toast } from "react-toastify";
-
-import { TileLayer, Marker } from "react-leaflet";
 import { Icon } from "leaflet";
 import { useContext } from "react";
-import { ThemeContext } from "../../contexts/Theme.context";
-import { ButtonComponent } from "../Button/Button.component";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { Delete } from "../../services/Locations/Locations.service";
+import { TileLayer, Marker } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+
+import { ButtonComponent } from "../Button/Button.component";
+
+import {
+  Delete,
+  GetLocations,
+} from "../../services/Locations/Locations.service";
+
+import { ThemeContext } from "../../contexts/Theme.context";
+import { LocationContext } from "../../contexts/Locations.context";
+
+import * as Styled from "./Card.styles";
 
 export const CardsComponent = ({ item, userId }) => {
   const { theme } = useContext(ThemeContext);
+  const { setLocations } = useContext(LocationContext);
   const navigate = useNavigate();
 
   const customIcon = new Icon({
@@ -22,6 +30,9 @@ export const CardsComponent = ({ item, userId }) => {
   const DeleteLocal = async () => {
     try {
       await Delete(item.id);
+      await GetLocations().then((res) => {
+        setLocations(res);
+      });
       toast.success("Local deletado com sucesso", {
         position: "bottom-right",
         theme: "colored",
