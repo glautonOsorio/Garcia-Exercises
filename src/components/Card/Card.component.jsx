@@ -8,10 +8,15 @@ import { useContext } from "react";
 import { ThemeContext } from "../../contexts/Theme.context";
 import { ButtonComponent } from "../Button/Button.component";
 import { useNavigate } from "react-router-dom";
-import { Delete } from "../../services/Locations/Locations.service";
+import {
+  Delete,
+  GetLocations,
+} from "../../services/Locations/Locations.service";
+import { LocationContext } from "../../contexts/Locations.context";
 
 export const CardsComponent = ({ item, userId }) => {
   const { theme } = useContext(ThemeContext);
+  const { setLocations } = useContext(LocationContext);
   const navigate = useNavigate();
 
   const customIcon = new Icon({
@@ -22,6 +27,9 @@ export const CardsComponent = ({ item, userId }) => {
   const DeleteLocal = async () => {
     try {
       await Delete(item.id);
+      await GetLocations().then((res) => {
+        setLocations(res);
+      });
       toast.success("Local deletado com sucesso", {
         position: "bottom-right",
         theme: "colored",

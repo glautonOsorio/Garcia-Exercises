@@ -24,7 +24,6 @@ export const RegisterLocationComponent = () => {
   const { theme } = useContext(ThemeContext);
   const { user } = useContext(AuthContext);
   const { locations, setLocations } = useContext(LocationContext);
-  const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -146,6 +145,9 @@ export const RegisterLocationComponent = () => {
   const DeleteLocal = async () => {
     try {
       await Delete(id);
+      await GetLocations().then((res) => {
+        setLocations(res);
+      });
       toast.success("Local deletado com sucesso", {
         position: "bottom-right",
         theme: "colored",
